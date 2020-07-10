@@ -38,6 +38,10 @@ void Nuevouser::on_crearuser_clicked()
         QMessageBox::information(this,"Nuevo Usuario","El Usuario a sido creado");//Informa al usuario que el archivo fue creado
     }
 
+    //Limpia los campos luego de ser aceptado el usuario
+    ui->name->clear();
+    ui->pass->clear();
+
 }
 
 void Nuevouser::on_atras_clicked()

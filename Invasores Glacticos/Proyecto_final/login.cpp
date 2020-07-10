@@ -1,9 +1,13 @@
 #include "login.h"
 #include "ui_login.h"
 #include "nuevouser.h"
+#include "instrucciones.h"
+#include "oponente.h"
 #include <QFile>
 #include <QDebug>
+#include <QMessageBox>
 
+//Login de usuarios al juego
 Login::Login(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Login)
@@ -16,7 +20,7 @@ Login::~Login()
     delete ui;
 }
 
-//Validar el usuario ingresado
+//Boton para Validar el usuario ingresado
 void Login::on_Validar_clicked()
 {
     //Toma los valores en los campos
@@ -26,7 +30,8 @@ void Login::on_Validar_clicked()
 
     QFile archivo("../data/"+name+".txt");//busca el archivo
     if (!archivo.exists()){
-        qDebug() << "El archivo no existe";
+        //qDebug() << "El Usuario no existe";
+        QMessageBox::information(this,"Usuario","El Usuario no esta registrado");
     }
     //Abre el archivo en modo de lectura
     archivo.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -35,19 +40,33 @@ void Login::on_Validar_clicked()
     }else{
         contenido = archivo.readAll();//ReadAll devuelve un QByteArray. por eso era necesario definirlo
         if (contenido == pass){//Si el contenido es igual a la contraseña, se valida el usuario
-            qDebug() << "Usuario existente";
-        }else{
-            qDebug() << "El usuario no existe";
+            //qDebug() << "Clave correcta";
+            QMessageBox::information(this,"Contraseña","Usuario Correcto");
+            this->hide();
+            Oponente *o = new Oponente();
+            o->setModal(true);
+            o->show();
+        }else{//Si la clave es incorrecta saca un mensaje y limpia los campos
+            //qDebug() << "Clave incorrecta";
+            QMessageBox::information(this,"Contraseña","Contraseña incorrecta");
+            ui->nombre->clear();
+            ui->pass->clear();
         }
     }
-    archivo.close();
+    archivo.close();//Cierra el archivo
 }
 
+//Boton para mostrar las instrucciones
 void Login::on_instrucciones_clicked()
 {
+    this->hide();
+    Instrucciones *I = new Instrucciones();
+    I->setModal(true);//Cuando esta instruccion es verdadera, la ventana es emergente
+    I->show();
 
 }
 
+//Boton para mostrar ventana de registro de nuevo usuario
 void Login::on_n_user_clicked()
 {
     this->hide();//Esconde esta ventana
@@ -55,6 +74,7 @@ void Login::on_n_user_clicked()
     w->show();//la muestra
 }
 
+//Boton para cerrar la aplicacion
 void Login::on_salir_clicked()
 {
     this->close();//Cierra la aplicacion.

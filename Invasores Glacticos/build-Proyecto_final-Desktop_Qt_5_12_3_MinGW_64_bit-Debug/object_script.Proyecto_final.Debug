@@ -1,0 +1,11 @@
+debug/game.o
+debug/instrucciones.o
+debug/main.o
+debug/login.o
+debug/nuevouser.o
+debug/oponente.o
+debug/moc_game.o
+debug/moc_instrucciones.o
+debug/moc_login.o
+debug/moc_nuevouser.o
+debug/moc_oponente.o

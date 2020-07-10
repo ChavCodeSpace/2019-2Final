@@ -16,17 +16,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    game.cpp \
+    instrucciones.cpp \
     main.cpp \
     login.cpp \
-    nuevouser.cpp
+    nuevouser.cpp \
+    oponente.cpp
 
 HEADERS += \
+    game.h \
+    instrucciones.h \
     login.h \
-    nuevouser.h
+    nuevouser.h \
+    oponente.h
 
 FORMS += \
+    instrucciones.ui \
     login.ui \
-    nuevouser.ui
+    nuevouser.ui \
+    oponente.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

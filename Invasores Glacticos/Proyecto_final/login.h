@@ -4,7 +4,7 @@
 #include <QMainWindow>
 
 
-
+//Clase del Login de los Usuarios
 QT_BEGIN_NAMESPACE
 namespace Ui { class Login; }
 QT_END_NAMESPACE

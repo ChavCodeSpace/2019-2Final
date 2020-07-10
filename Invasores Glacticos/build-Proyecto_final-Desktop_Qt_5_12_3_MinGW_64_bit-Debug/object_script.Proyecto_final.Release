@@ -1,0 +1,11 @@
+release/game.o
+release/instrucciones.o
+release/main.o
+release/login.o
+release/nuevouser.o
+release/oponente.o
+release/moc_game.o
+release/moc_instrucciones.o
+release/moc_login.o
+release/moc_nuevouser.o
+release/moc_oponente.o

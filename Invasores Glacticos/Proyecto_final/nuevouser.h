@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+//Clase para el registro de nuevos usuarios
 namespace Ui {
 class Nuevouser;
 }

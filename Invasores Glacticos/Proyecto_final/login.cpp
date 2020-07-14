@@ -3,9 +3,12 @@
 #include "nuevouser.h"
 #include "instrucciones.h"
 #include "oponente.h"
+#include "game.h"
 #include <QFile>
 #include <QDebug>
 #include <QMessageBox>
+
+//extern Game *game;//Con esto el programa sabe que existe game
 
 //Login de usuarios al juego
 Login::Login(QWidget *parent)
@@ -26,6 +29,7 @@ void Login::on_Validar_clicked()
     //Toma los valores en los campos
     name = ui->nombre->text();
     pass = ui->pass->text();
+
     QByteArray contenido;//Vector de bytes necesario para los QFile
 
     QFile archivo("../data/"+name+".txt");//busca el archivo
@@ -42,6 +46,7 @@ void Login::on_Validar_clicked()
         if (contenido == pass){//Si el contenido es igual a la contraseña, se valida el usuario
             //qDebug() << "Clave correcta";
             QMessageBox::information(this,"Contraseña","Usuario Correcto");
+            //game->l->setName(name);
             this->hide();
             Oponente *o = new Oponente();
             o->setModal(true);
@@ -78,4 +83,14 @@ void Login::on_n_user_clicked()
 void Login::on_salir_clicked()
 {
     this->close();//Cierra la aplicacion.
+}
+
+QString Login::getName() const
+{
+    return name;
+}
+
+void Login::setName(const QString &value)
+{
+    name = value;
 }

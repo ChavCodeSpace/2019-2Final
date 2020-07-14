@@ -17,6 +17,9 @@ public:
     Login(QWidget *parent = nullptr);
     ~Login();
 
+    QString getName() const;
+    void setName(const QString &value);
+
 private slots:
     void on_Validar_clicked();
 

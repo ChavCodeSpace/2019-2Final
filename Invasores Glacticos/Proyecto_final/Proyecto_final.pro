@@ -17,30 +17,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     bala_jugador.cpp \
-    game.cpp \
     instrucciones.cpp \
     main.cpp \
     login.cpp \
     nuevouser.cpp \
     oponente.cpp \
-    player1.cpp \
-    player2.cpp
+    panel.cpp \
+    player1.cpp
 
 HEADERS += \
     bala_jugador.h \
-    game.h \
     instrucciones.h \
     login.h \
     nuevouser.h \
     oponente.h \
-    player1.h \
-    player2.h
+    panel.h \
+    player1.h
 
 FORMS += \
     instrucciones.ui \
     login.ui \
     nuevouser.ui \
-    oponente.ui
+    oponente.ui \
+    panel.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

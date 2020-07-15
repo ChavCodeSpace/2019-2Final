@@ -1,9 +1,7 @@
 #include "oponente.h"
 #include "ui_oponente.h"
-#include "game.h"
+#include "panel.h"
 #include <QDebug>
-
-//extern Game *game;//Game existe
 
 //Oponente del juego
 Oponente::Oponente(QWidget *parent) :
@@ -35,9 +33,20 @@ void Oponente::on_aceptar_clicked()
     QString aux;
     aux = ui->o_name->text();
     setNombre_oponente(aux);
-    //game->o->setNombre_oponente(aux);
     //qDebug() << this->getNombre_oponente();
     this->hide();//esconde esta ventana
-    Game *g = new Game();//inicia el juego
-    g->show();
+    Panel *p = new Panel();
+    p->setNombre1(nombre_jugador);
+    p->setNombre2(nombre_oponente);
+    p->show();
+}
+
+QString Oponente::getNombre_jugador() const
+{
+    return nombre_jugador;
+}
+
+void Oponente::setNombre_jugador(const QString &value)
+{
+    nombre_jugador = value;
 }

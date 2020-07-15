@@ -3,12 +3,9 @@
 #include "nuevouser.h"
 #include "instrucciones.h"
 #include "oponente.h"
-#include "game.h"
 #include <QFile>
 #include <QDebug>
 #include <QMessageBox>
-
-//extern Game *game;//Con esto el programa sabe que existe game
 
 //Login de usuarios al juego
 Login::Login(QWidget *parent)
@@ -36,6 +33,8 @@ void Login::on_Validar_clicked()
     if (!archivo.exists()){
         //qDebug() << "El Usuario no existe";
         QMessageBox::information(this,"Usuario","El Usuario no esta registrado");
+        ui->nombre->clear();
+        ui->pass->clear();
     }
     //Abre el archivo en modo de lectura
     archivo.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -46,10 +45,10 @@ void Login::on_Validar_clicked()
         if (contenido == pass){//Si el contenido es igual a la contraseña, se valida el usuario
             //qDebug() << "Clave correcta";
             QMessageBox::information(this,"Contraseña","Usuario Correcto");
-            //game->l->setName(name);
             this->hide();
             Oponente *o = new Oponente();
             o->setModal(true);
+            o->setNombre_jugador(name);
             o->show();
         }else{//Si la clave es incorrecta saca un mensaje y limpia los campos
             //qDebug() << "Clave incorrecta";

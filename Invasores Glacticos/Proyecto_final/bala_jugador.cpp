@@ -1,6 +1,8 @@
 #include "bala_jugador.h"
 #include <QDebug>
 
+extern Panel *p;
+
 //Balas de los jugadores
 Bala_jugador::Bala_jugador(int t)
 {
@@ -18,17 +20,6 @@ Bala_jugador::Bala_jugador(int t)
     b_timer->start(50);
 }
 
-//Funcion para la accion despues de la colicion de la bala normal a un jugador
-void Bala_jugador::choque(int p)
-{
-    if (p == 1){
-        qDebug ()<<"b2 crash p1";
-    }
-    if (p == 2){
-        qDebug()<<"b1 crash p2";
-    }
-}
-
 //Funcion del movimiento de la bala hacia la izquierda
 void Bala_jugador::bullet_move_left()
 {
@@ -43,7 +34,15 @@ void Bala_jugador::bullet_move_left()
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
         if (typeid (*(colliding_items[i])) == typeid (Player)){
-           choque(1);
+           //Cuando las balas impactan, quitan vida y desaparecen
+           p->decrease(2);
+           scene()->removeItem(this);
+           delete this;
+        }
+        //Si choca con un muro desaparece
+        if (typeid (*(colliding_items[i])) == typeid (Wall)){
+           scene()->removeItem(this);
+           delete this;
         }
     }
 
@@ -63,7 +62,13 @@ void Bala_jugador::bullet_move_rigth()
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
         if (typeid (*(colliding_items[i])) == typeid (Player)){
-           choque(2);
+           scene()->removeItem(this);
+           delete this;
+           p->decrease(1);
+        }
+        if (typeid (*(colliding_items[i])) == typeid (Wall)){
+           scene()->removeItem(this);
+           delete this;
         }
     }
 }

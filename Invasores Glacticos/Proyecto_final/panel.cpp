@@ -25,7 +25,19 @@ Panel::Panel(QWidget *parent) :
     p2 = new Player();
     jugadores.push_back(p2);
 
-    //Coliciones
+    //Obstaculos
+    Wall *muro1 = new Wall();
+    muro1->setPos(130,130);
+    scene->addItem(muro1);
+    Wall *muro2 = new Wall();
+    muro2->setPos(130,330);
+    scene->addItem(muro2);
+    Wall *muro3 = new Wall();
+    muro3->setPos(650,130);
+    scene->addItem(muro3);
+    Wall *muro4 = new Wall();
+    muro4->setPos(650,330);
+    scene->addItem(muro4);
 
 }
 
@@ -36,23 +48,23 @@ Panel::~Panel()
 
 void Panel::on_Iniciar_clicked()
 {
+    //Setea los nombres y las vidas
     ui->lbl_nombre1->setText(nombre1);
     ui->lbl_nombre2->setText(nombre2);
-    ui->Iniciar->setVisible(false);
+    ui->lbl_vida1->setText(QString::number(vida1));
+    ui->lbl_vida2->setText(QString::number(vida2));
+    ui->Iniciar->setVisible(false);//Esconde el boton
 
-    p1->setPos(30,200);
+    //Muestra Personajes
+    p1->setPos(30,250);
     scene->addItem(p1);
-
-    p2->setPos(720,200);
+    p2->setPos(720,250);
     scene->addItem(p2);
 
+
 }
 
-void Panel::setNombre2(const QString &value)
-{
-    nombre2 = value;
-}
-
+//Funcion para el movimiento de los jugadores
 void Panel::keyPressEvent(QKeyEvent *event)
 {
     if (jugadores.size()>0 && jugadores.size()<2){
@@ -112,7 +124,25 @@ void Panel::keyPressEvent(QKeyEvent *event)
     }
 }
 
+//Funcion para restar vida
+void Panel::decrease(int t)
+{
+    if (t == 1){
+       vida1 -= 10;
+       ui->lbl_vida1->setText(QString::number(vida1));
+    }
+    else if (t == 2){
+       vida2 -= 10;
+       ui->lbl_vida2->setText(QString::number(vida2));
+    }
+}
+
 void Panel::setNombre1(const QString &value)
 {
     nombre1 = value;
+}
+
+void Panel::setNombre2(const QString &value)
+{
+    nombre2 = value;
 }

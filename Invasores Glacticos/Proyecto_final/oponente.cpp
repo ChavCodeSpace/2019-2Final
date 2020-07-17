@@ -3,6 +3,8 @@
 #include "panel.h"
 #include <QDebug>
 
+extern  Panel *p;
+
 //Oponente del juego
 Oponente::Oponente(QWidget *parent) :
     QDialog(parent),
@@ -35,7 +37,7 @@ void Oponente::on_aceptar_clicked()
     setNombre_oponente(aux);
     //qDebug() << this->getNombre_oponente();
     this->hide();//esconde esta ventana
-    Panel *p = new Panel();
+    p = new Panel();
     p->setNombre1(nombre_jugador);
     p->setNombre2(nombre_oponente);
     p->show();

@@ -6,6 +6,7 @@ debug/nuevouser.o
 debug/oponente.o
 debug/panel.o
 debug/player.o
+debug/wall.o
 debug/moc_bala_jugador.o
 debug/moc_instrucciones.o
 debug/moc_login.o

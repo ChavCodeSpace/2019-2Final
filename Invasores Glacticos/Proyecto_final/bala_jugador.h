@@ -7,6 +7,7 @@
 #include <QTimer>
 #include "panel.h"
 #include "player.h"
+#include "wall.h"
 
 class Bala_jugador: public QObject, public QGraphicsRectItem
 {
@@ -14,7 +15,6 @@ class Bala_jugador: public QObject, public QGraphicsRectItem
 public:
     Bala_jugador(int t);
 
-    void choque(int p);
 public slots:
     void bullet_move_rigth();
     void bullet_move_left();

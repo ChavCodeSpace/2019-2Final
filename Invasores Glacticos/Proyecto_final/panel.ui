@@ -30,9 +30,9 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>40</y>
+     <y>20</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -42,10 +42,10 @@
   <widget class="QLabel" name="lbl_nombre2">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>30</y>
+     <x>650</x>
+     <y>20</y>
      <width>121</width>
-     <height>51</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -60,6 +60,32 @@
      <width>771</width>
      <height>361</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_vida1">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_vida2">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>60</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

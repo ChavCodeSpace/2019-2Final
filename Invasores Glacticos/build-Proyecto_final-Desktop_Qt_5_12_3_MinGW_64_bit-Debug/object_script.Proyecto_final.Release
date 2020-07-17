@@ -6,6 +6,7 @@ release/nuevouser.o
 release/oponente.o
 release/panel.o
 release/player.o
+release/wall.o
 release/moc_bala_jugador.o
 release/moc_instrucciones.o
 release/moc_login.o

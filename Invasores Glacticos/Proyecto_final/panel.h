@@ -9,6 +9,7 @@
 #include "login.h"
 #include "bala_jugador.h"
 #include "player.h"
+#include "wall.h"
 
 //Clase para el universo del juego
 namespace Ui {
@@ -25,6 +26,7 @@ public:
     void setNombre1(const QString &value);
     void setNombre2(const QString &value);
     void keyPressEvent(QKeyEvent *event);
+    void decrease(int t);
 
 private slots:
     void on_Iniciar_clicked();
@@ -37,7 +39,8 @@ private:
     Player *p1;
     Player *p2;
     QList <Player *> jugadores;
-
+    int vida1 = 100;
+    int vida2 = 100;
 };
 
 #endif // PANEL_H

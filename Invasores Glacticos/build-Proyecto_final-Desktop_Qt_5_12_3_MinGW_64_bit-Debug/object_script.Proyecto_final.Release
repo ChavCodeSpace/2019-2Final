@@ -5,11 +5,10 @@ release/login.o
 release/nuevouser.o
 release/oponente.o
 release/panel.o
-release/player1.o
+release/player.o
 release/moc_bala_jugador.o
 release/moc_instrucciones.o
 release/moc_login.o
 release/moc_nuevouser.o
 release/moc_oponente.o
 release/moc_panel.o
-release/moc_player1.o

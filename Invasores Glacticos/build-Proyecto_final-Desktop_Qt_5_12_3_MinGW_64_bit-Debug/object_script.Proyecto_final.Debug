@@ -5,11 +5,10 @@ debug/login.o
 debug/nuevouser.o
 debug/oponente.o
 debug/panel.o
-debug/player1.o
+debug/player.o
 debug/moc_bala_jugador.o
 debug/moc_instrucciones.o
 debug/moc_login.o
 debug/moc_nuevouser.o
 debug/moc_oponente.o
 debug/moc_panel.o
-debug/moc_player1.o

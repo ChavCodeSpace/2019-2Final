@@ -36,10 +36,10 @@ public:
         Iniciar->setGeometry(QRect(330, 30, 81, 51));
         lbl_nombre1 = new QLabel(Panel);
         lbl_nombre1->setObjectName(QString::fromUtf8("lbl_nombre1"));
-        lbl_nombre1->setGeometry(QRect(50, 30, 111, 41));
+        lbl_nombre1->setGeometry(QRect(40, 40, 111, 41));
         lbl_nombre2 = new QLabel(Panel);
         lbl_nombre2->setObjectName(QString::fromUtf8("lbl_nombre2"));
-        lbl_nombre2->setGeometry(QRect(640, 20, 121, 51));
+        lbl_nombre2->setGeometry(QRect(660, 30, 121, 51));
         view = new QGraphicsView(Panel);
         view->setObjectName(QString::fromUtf8("view"));
         view->setGeometry(QRect(20, 100, 771, 361));

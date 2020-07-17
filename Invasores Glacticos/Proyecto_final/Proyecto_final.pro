@@ -23,7 +23,7 @@ SOURCES += \
     nuevouser.cpp \
     oponente.cpp \
     panel.cpp \
-    player1.cpp
+    player.cpp
 
 HEADERS += \
     bala_jugador.h \
@@ -32,7 +32,7 @@ HEADERS += \
     nuevouser.h \
     oponente.h \
     panel.h \
-    player1.h
+    player.h
 
 FORMS += \
     instrucciones.ui \

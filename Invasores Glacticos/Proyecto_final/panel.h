@@ -7,9 +7,10 @@
 #include <QGraphicsView>
 #include "oponente.h"
 #include "login.h"
-#include "player1.h"
 #include "bala_jugador.h"
+#include "player.h"
 
+//Clase para el universo del juego
 namespace Ui {
 class Panel;
 }
@@ -20,12 +21,10 @@ class Panel : public QWidget
 
 public:
     explicit Panel(QWidget *parent = nullptr);
-    ~Panel();
-    QGraphicsScene *scene;
-    Player1 *p1;
-
+    ~Panel();    
     void setNombre1(const QString &value);
     void setNombre2(const QString &value);
+    void keyPressEvent(QKeyEvent *event);
 
 private slots:
     void on_Iniciar_clicked();
@@ -34,8 +33,11 @@ private:
     Ui::Panel *ui;
     QString nombre1;
     QString nombre2;
+    QGraphicsScene *scene;
+    Player *p1;
+    Player *p2;
+    QList <Player *> jugadores;
 
-    QList<Player1 *> jugadores;
 };
 
 #endif // PANEL_H

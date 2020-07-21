@@ -21,26 +21,25 @@ Panel::Panel(QWidget *parent) :
     //Jugadores
     p1 = new Player();
     jugadores.push_back(p1);
-
     p2 = new Player();
     jugadores.push_back(p2);
 
     //Obstaculos
     Wall *muro1 = new Wall();
-    muro1->setPos(130,130);
+    muro1->setPos(170,130);
     scene->addItem(muro1);
     Wall *muro2 = new Wall();
-    muro2->setPos(130,330);
+    muro2->setPos(170,330);
     scene->addItem(muro2);
     Wall *muro3 = new Wall();
-    muro3->setPos(650,130);
+    muro3->setPos(600,130);
     scene->addItem(muro3);
     Wall *muro4 = new Wall();
-    muro4->setPos(650,330);
-    scene->addItem(muro4);
+    muro4->setPos(600,330);
+    scene->addItem(muro4);    
+
 
 }
-
 Panel::~Panel()
 {
     delete ui;
@@ -61,6 +60,10 @@ void Panel::on_Iniciar_clicked()
     p2->setPos(720,250);
     scene->addItem(p2);
 
+    //Aliado superior
+    Aliado_superior *ally_1 = new Aliado_superior();
+    ally_1->setPos(100,30);
+    scene->addItem(ally_1);
 
 }
 
@@ -71,7 +74,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
         if (event->key() == Qt::Key_W){
             if (jugadores.at(0)->pos().y() > 100){
                 jugadores.at(0)->setPos(jugadores.at(0)->x(),jugadores.at(0)->y()-10);
-                //qDebug() << "pos subiendo"<<this->y();
+                qDebug() << "pos subiendo"<<this->y();
             }
         }
         if (event->key() == Qt::Key_S){
@@ -128,12 +131,12 @@ void Panel::keyPressEvent(QKeyEvent *event)
 void Panel::decrease(int t)
 {
     if (t == 1){
-       vida1 -= 10;
-       ui->lbl_vida1->setText(QString::number(vida1));
-    }
-    else if (t == 2){
        vida2 -= 10;
        ui->lbl_vida2->setText(QString::number(vida2));
+    }
+    else if (t == 2){
+       vida1 -= 10;
+       ui->lbl_vida1->setText(QString::number(vida1));
     }
 }
 

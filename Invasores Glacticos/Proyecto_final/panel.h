@@ -5,11 +5,14 @@
 #include <QList>
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QTimer>
+#include <QObject>
 #include "oponente.h"
 #include "login.h"
 #include "bala_jugador.h"
 #include "player.h"
 #include "wall.h"
+#include "aliado_superior.h"
 
 //Clase para el universo del juego
 namespace Ui {

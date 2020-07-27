@@ -17,13 +17,10 @@ public:
     ~Oponente();    
 
     QString getNombre_oponente() const;
-    void setNombre_oponente(const QString &value);
-
-
-
-    void setNombre_jugador(const QString &value);
-
     QString getNombre_jugador() const;
+
+    void setNombre_oponente(const QString &value);
+    void setNombre_jugador(const QString &value);
 
 private slots:
     void on_aceptar_clicked();

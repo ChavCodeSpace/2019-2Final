@@ -48,6 +48,7 @@ void Bala_jugador::bullet_move_left()
 
 }
 
+//Funciones de Movimiento: Uniforme
 //Funcion del movimiento de la bala hacia la derecha
 void Bala_jugador::bullet_move_rigth()
 {

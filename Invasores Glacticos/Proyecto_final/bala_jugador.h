@@ -9,6 +9,7 @@
 #include "player.h"
 #include "wall.h"
 
+//Clase de la bala de los jugadores
 class Bala_jugador: public QObject, public QGraphicsRectItem
 {
     Q_OBJECT

@@ -1,8 +1,9 @@
 #include "bala_aliado_superior.h"
 #include <QDebug>
 
-extern Panel *p;
+extern Panel *p;//Panel del juego
 
+//Bala del aliado superior izquierdo
 Bala_aliado_superior::Bala_aliado_superior(double px, double py)
 {
     posx=px;
@@ -10,12 +11,19 @@ Bala_aliado_superior::Bala_aliado_superior(double px, double py)
     vel=60.0;
     ang=45;
     setRect(posx,posy,20,20);
-    QTimer *b_a_timer = new QTimer();    
+    b_a_timer = new QTimer();
     connect(b_a_timer,SIGNAL(timeout()),this,SLOT(move()));
 
     b_a_timer->start(50);
 }
 
+//Funcion para detener el movimiento de la bala
+void Bala_aliado_superior::detener()
+{
+    b_a_timer->stop();
+}
+
+//Funcion de movimiento: Parabolico + Gravitacional
 void Bala_aliado_superior::move()
 {
     vel_x=vel*cos(ang);
@@ -34,6 +42,12 @@ void Bala_aliado_superior::move()
            scene()->removeItem(this);
            delete this;
         }
+    }
+    //Si la bala se sale de la escena se elimina
+    if (pos().y() > 400){
+        scene()->removeItem(this);
+        delete this;
+        //qDebug()<<"se elimino la bala del aliado 1";
     }
 }
 

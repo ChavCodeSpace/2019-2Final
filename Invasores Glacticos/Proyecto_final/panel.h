@@ -15,7 +15,7 @@
 #include "aliado_superior.h"
 #include "aliado_inferior.h"
 
-//Clase para el universo del juego
+//Clase de el universo del juego
 namespace Ui {
 class Panel;
 }
@@ -44,9 +44,11 @@ private:
     Player *p1;
     Player *p2;
     QList <Player *> jugadores;
-    int vida1 = 100;
-    int vida2 = 100;
+    int vida1 = 200;
+    int vida2 = 200;
     QTimer *timer_u;
+    Aliado_superior *ally_1;
+    Aliado_inferior *ally_2;
 };
 
 #endif // PANEL_H

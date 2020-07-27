@@ -1,5 +1,6 @@
 debug/aliado_inferior.o
 debug/aliado_superior.o
+debug/bala_aliado_inferior.o
 debug/bala_aliado_superior.o
 debug/bala_jugador.o
 debug/instrucciones.o
@@ -12,6 +13,7 @@ debug/player.o
 debug/wall.o
 debug/moc_aliado_inferior.o
 debug/moc_aliado_superior.o
+debug/moc_bala_aliado_inferior.o
 debug/moc_bala_aliado_superior.o
 debug/moc_bala_jugador.o
 debug/moc_instrucciones.o

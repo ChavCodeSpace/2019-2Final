@@ -66,21 +66,17 @@ void Panel::on_Iniciar_clicked()
 
     timer_u->start(3000);
 
-    //Aliado superior derecho
-//    Aliado_superior *ally_2 = new Aliado_superior();
-//    ally_2->setPos(650,30);
-    //    scene->addItem(ally_2);
 }
 
 void Panel::spawn_enemies()
 {
     //Aliado superior izquierdo
-    Aliado_superior *ally_1 = new Aliado_superior();
+    ally_1 = new Aliado_superior();
     ally_1->setPos(100,30);
     scene->addItem(ally_1);
 
     //Aliado inferior derecho
-    Aliado_inferior *ally_2 = new Aliado_inferior();
+    ally_2 = new Aliado_inferior();
     ally_2->setPos(650,450);
     scene->addItem(ally_2);
 }
@@ -151,10 +147,23 @@ void Panel::decrease(int t)
     if (t == 1){
        vida2 -= 10;
        ui->lbl_vida2->setText(QString::number(vida2));
+
+       if (vida2 == 0){
+           timer_u->stop();
+           qDebug() <<"Fin del juego";
+           ally_1->detener();
+           ally_2->detener();
+       }
     }
     else if (t == 2){
        vida1 -= 10;
        ui->lbl_vida1->setText(QString::number(vida1));
+       if (vida1 == 0){
+           timer_u->stop();
+           qDebug() <<"Fin del juego";
+           ally_1->detener();
+           ally_2->detener();
+       }
     }
 }
 

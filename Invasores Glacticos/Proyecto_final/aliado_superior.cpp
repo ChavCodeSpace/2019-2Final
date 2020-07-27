@@ -8,20 +8,20 @@ Aliado_superior::Aliado_superior()
     QTimer *timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
 
-    timer->start(2000);
+    timer->start(1000);
 }
 
 void Aliado_superior::move()
 {
     setPos(x(),y()+70);
-    if (pos().y() > 100.0){
-       qDebug() << "aliado dispara";
-       setPos(x(),y()-70);
-       if (pos().y() < 70.0){
-          qDebug()<<"elimino aliado";
-   //       scene()->removeItem(this);
-   //       delete this;
-       }
+    //qDebug() << "dispara";
+    Bala_aliado_superior *bala = new Bala_aliado_superior(1,this->x()+30,this->y());
+    scene()->addItem(bala);
+    if (pos().y() > 420.0){
+       scene()->removeItem(this);
+       delete this;
+       //qDebug() << "aliado dispara";
+
     }
 
 }

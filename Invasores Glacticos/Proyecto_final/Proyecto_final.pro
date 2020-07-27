@@ -16,7 +16,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aliado_inferior.cpp \
     aliado_superior.cpp \
+    bala_aliado_inferior.cpp \
+    bala_aliado_superior.cpp \
     bala_jugador.cpp \
     instrucciones.cpp \
     main.cpp \
@@ -28,7 +31,10 @@ SOURCES += \
     wall.cpp
 
 HEADERS += \
+    aliado_inferior.h \
     aliado_superior.h \
+    bala_aliado_inferior.h \
+    bala_aliado_superior.h \
     bala_jugador.h \
     instrucciones.h \
     login.h \

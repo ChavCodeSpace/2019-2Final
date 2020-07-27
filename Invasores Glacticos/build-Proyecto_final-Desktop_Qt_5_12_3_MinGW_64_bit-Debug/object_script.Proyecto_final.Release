@@ -1,4 +1,6 @@
+release/aliado_inferior.o
 release/aliado_superior.o
+release/bala_aliado_superior.o
 release/bala_jugador.o
 release/instrucciones.o
 release/main.o
@@ -8,7 +10,9 @@ release/oponente.o
 release/panel.o
 release/player.o
 release/wall.o
+release/moc_aliado_inferior.o
 release/moc_aliado_superior.o
+release/moc_bala_aliado_superior.o
 release/moc_bala_jugador.o
 release/moc_instrucciones.o
 release/moc_login.o

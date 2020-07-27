@@ -38,6 +38,10 @@ Panel::Panel(QWidget *parent) :
     muro4->setPos(600,330);
     scene->addItem(muro4);    
 
+    //Timer para el spawn de aliados
+    timer_u = new QTimer();
+    connect(timer_u,SIGNAL(timeout()),this,SLOT(spawn_enemies()));
+
 
 }
 Panel::~Panel()
@@ -60,11 +64,25 @@ void Panel::on_Iniciar_clicked()
     p2->setPos(720,250);
     scene->addItem(p2);
 
-    //Aliado superior
+    timer_u->start(3000);
+
+    //Aliado superior derecho
+//    Aliado_superior *ally_2 = new Aliado_superior();
+//    ally_2->setPos(650,30);
+    //    scene->addItem(ally_2);
+}
+
+void Panel::spawn_enemies()
+{
+    //Aliado superior izquierdo
     Aliado_superior *ally_1 = new Aliado_superior();
     ally_1->setPos(100,30);
     scene->addItem(ally_1);
 
+    //Aliado inferior derecho
+    Aliado_inferior *ally_2 = new Aliado_inferior();
+    ally_2->setPos(650,450);
+    scene->addItem(ally_2);
 }
 
 //Funcion para el movimiento de los jugadores
@@ -104,7 +122,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
         }
         if (event->key() == Qt::Key_D){
             Bala_jugador *bala = new Bala_jugador(1);
-            bala->setPos(jugadores.at(0)->x()+52,jugadores.at(0)->y());
+            bala->setPos(jugadores.at(0)->x()+52,jugadores.at(0)->y()+25);
             scene->addItem(bala);
         }
         if (event->key() == Qt::Key_I){
@@ -121,7 +139,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
         }
         if (event->key() == Qt::Key_J){
             Bala_jugador *bala = new Bala_jugador(2);
-            bala->setPos(jugadores.at(1)->x()-32,jugadores.at(1)->y());
+            bala->setPos(jugadores.at(1)->x()-32,jugadores.at(1)->y()+25);
             scene->addItem(bala);            
         }
     }

@@ -13,6 +13,7 @@
 #include "player.h"
 #include "wall.h"
 #include "aliado_superior.h"
+#include "aliado_inferior.h"
 
 //Clase para el universo del juego
 namespace Ui {
@@ -33,6 +34,7 @@ public:
 
 private slots:
     void on_Iniciar_clicked();
+    void spawn_enemies();
 
 private:
     Ui::Panel *ui;
@@ -44,6 +46,7 @@ private:
     QList <Player *> jugadores;
     int vida1 = 100;
     int vida2 = 100;
+    QTimer *timer_u;
 };
 
 #endif // PANEL_H

@@ -12,8 +12,9 @@
 #include "bala_jugador.h"
 #include "player.h"
 #include "wall.h"
-#include "aliado_superior.h"
-#include "aliado_inferior.h"
+
+class Defensor;
+class Invasor;
 
 //Clase de el universo del juego
 namespace Ui {
@@ -41,14 +42,16 @@ private:
     QString nombre1;
     QString nombre2;
     QGraphicsScene *scene;
+    Defensor *ally_1;
+    Invasor *ally_2;
     Player *p1;
     Player *p2;
     QList <Player *> jugadores;
     int vida1 = 200;
     int vida2 = 200;
     QTimer *timer_u;
-    Aliado_superior *ally_1;
-    Aliado_inferior *ally_2;
+
+
 };
 
 #endif // PANEL_H

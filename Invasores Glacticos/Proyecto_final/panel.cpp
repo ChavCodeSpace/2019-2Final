@@ -2,6 +2,8 @@
 #include "ui_panel.h"
 #include <QDebug>
 #include <QGraphicsItem>
+#include "defensor.h"
+#include "invasor.h"
 
 //Universo del juego
 Panel::Panel(QWidget *parent) :
@@ -71,12 +73,12 @@ void Panel::on_Iniciar_clicked()
 void Panel::spawn_enemies()
 {
     //Aliado superior izquierdo
-    ally_1 = new Aliado_superior();
+    ally_1 = new Defensor();
     ally_1->setPos(100,30);
     scene->addItem(ally_1);
 
     //Aliado inferior derecho
-    ally_2 = new Aliado_inferior();
+    ally_2 = new Invasor();
     ally_2->setPos(650,450);
     scene->addItem(ally_2);
 }

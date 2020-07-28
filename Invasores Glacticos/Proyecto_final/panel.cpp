@@ -3,6 +3,8 @@
 #include <QDebug>
 #include <QGraphicsItem>
 #include <QMessageBox>
+#include <QFile>
+#include <QTextStream>
 #include "defensor.h"
 #include "invasor.h"
 
@@ -165,12 +167,7 @@ void Panel::decrease(int t)
            ally_1->detener();
            ally_2->detener();
            QMessageBox::information(this,"Fin del Juego","Juego Terminado");
-           this->hide();
            Final(nombre1, nombre2);
-//           Menu_final *menu = new Menu_final();
-//           menu->setNombre_ganador(nombre1);
-//           menu->setNombre_perdedor(nombre2);
-//           menu->show();
        }
     }
     else if (t == 2){
@@ -183,19 +180,31 @@ void Panel::decrease(int t)
            ally_2->detener();
            QMessageBox::information(this,"Fin del Juego","Juego Terminado");
            Final(nombre2, nombre1);
-//           this->hide();
-//           Menu_final *menu = new Menu_final();
-//           menu->setNombre_ganador(nombre2);
-//           menu->setNombre_perdedor(nombre1);
-//           menu->show();
        }
     }
 }
 
+//Funcion para el final del juego
 void Panel::Final(QString n1, QString n2)
 {
+    //qDebug () << "Entro al final";
+    //Escribe el tablon de resultados
+    QFile archivo("../data/tablon.txt");
+    archivo.open(QIODevice::ReadWrite | QIODevice::Append | QIODevice::Text);
+    if (!archivo.isOpen()){
+        qDebug() << "No se pudo abrir el archivo";
+    }else{
+        QTextStream out(&archivo);
+        out << n1 << " le gano a "<< n2 <<endl;
+        archivo.flush();
+        archivo.close();
+    }
+
+    //qDebug() <<"Creo el archivo";
+
+    //Esconde esta ventana y abre la ventana de menu final
     this->hide();
-    Menu_final *menu = new Menu_final();
+    menu = new Menu_final();
     menu->setNombre_ganador(n1);
     menu->setNombre_perdedor(n2);
     menu->show();

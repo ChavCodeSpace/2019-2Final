@@ -53,7 +53,7 @@ private:
     int vida1;
     int vida2;
     QTimer *timer_u;
-
+    Menu_final *menu;
 
 };
 

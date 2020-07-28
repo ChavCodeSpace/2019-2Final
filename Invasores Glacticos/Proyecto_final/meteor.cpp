@@ -21,6 +21,6 @@ void Meteor::Caer()
     if (pos().y() > 430.0){
         scene()->removeItem(this);
         delete this;
-        qDebug() << "se elimino el meteorito";
+        //qDebug() << "se elimino el meteorito";
     }
 }

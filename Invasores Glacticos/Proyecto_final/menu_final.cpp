@@ -8,9 +8,8 @@ Menu_final::Menu_final(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Menu_final)
 {
-    ui->setupUi(this);
-
     ui->lbl_ganador->setText(this->getNombre_ganador());
+    ui->setupUi(this);    
 }
 
 Menu_final::~Menu_final()

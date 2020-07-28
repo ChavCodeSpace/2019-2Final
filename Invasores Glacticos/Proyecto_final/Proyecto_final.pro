@@ -23,6 +23,8 @@ SOURCES += \
     invasor.cpp \
     main.cpp \
     login.cpp \
+    menu_final.cpp \
+    meteor.cpp \
     nuevouser.cpp \
     oponente.cpp \
     panel.cpp \
@@ -37,6 +39,8 @@ HEADERS += \
     instrucciones.h \
     invasor.h \
     login.h \
+    menu_final.h \
+    meteor.h \
     nuevouser.h \
     oponente.h \
     panel.h \
@@ -47,6 +51,7 @@ HEADERS += \
 FORMS += \
     instrucciones.ui \
     login.ui \
+    menu_final.ui \
     nuevouser.ui \
     oponente.ui \
     panel.ui

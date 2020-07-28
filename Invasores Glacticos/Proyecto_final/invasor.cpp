@@ -26,7 +26,7 @@ void Invasor::move()
     setPos(x(),y()-60);
     bala = new Proyectil_invasor(this->x()-20, this->y());
     scene()->addItem(bala);
-    if (pos().y()<100){
+    if (pos().y()<40.0){
         scene()->removeItem(this);
         delete this;
     }

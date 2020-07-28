@@ -5,6 +5,8 @@ debug/instrucciones.o
 debug/invasor.o
 debug/main.o
 debug/login.o
+debug/menu_final.o
+debug/meteor.o
 debug/nuevouser.o
 debug/oponente.o
 debug/panel.o
@@ -17,6 +19,8 @@ debug/moc_defensor.o
 debug/moc_instrucciones.o
 debug/moc_invasor.o
 debug/moc_login.o
+debug/moc_menu_final.o
+debug/moc_meteor.o
 debug/moc_nuevouser.o
 debug/moc_oponente.o
 debug/moc_panel.o

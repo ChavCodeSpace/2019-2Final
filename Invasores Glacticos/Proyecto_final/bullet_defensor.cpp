@@ -1,4 +1,5 @@
 #include "bullet_defensor.h"
+#include <QDebug>
 
 extern Panel *p;
 
@@ -33,6 +34,7 @@ void Bullet_defensor::move()
     posx=posx+vel_x*delta;
     posy=posy+vel_y*delta-(0.5*g*delta*delta);
     setPos(posx,-posy);
+    //qDebug() << "bala en " << this->y();
     //Coliciones con los jugadores
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
@@ -43,8 +45,9 @@ void Bullet_defensor::move()
         }
     }
     //Se elimina el item cuando sale de la escena
-    if (pos().x() > 400){
+    if (pos().y() > 400){
         scene()->removeItem(this);
         delete this;
+        //qDebug() << "se elimino la bala";
     }
 }

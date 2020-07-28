@@ -2,6 +2,7 @@
 #include "ui_panel.h"
 #include <QDebug>
 #include <QGraphicsItem>
+#include <QMessageBox>
 #include "defensor.h"
 #include "invasor.h"
 
@@ -19,6 +20,10 @@ Panel::Panel(QWidget *parent) :
     ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     ui->view->show();
+
+    //Vida de los jugadores
+    vida1 = 100;
+    vida2 = 100;
 
     //Jugadores
     p1 = new Player();
@@ -66,7 +71,7 @@ void Panel::on_Iniciar_clicked()
     p2->setPos(720,250);
     scene->addItem(p2);
 
-    timer_u->start(3000);
+    timer_u->start(6000);
 
 }
 
@@ -81,6 +86,10 @@ void Panel::spawn_enemies()
     ally_2 = new Invasor();
     ally_2->setPos(650,450);
     scene->addItem(ally_2);
+
+    //Meteoritos
+    Meteor *meteorito = new Meteor();
+    scene->addItem(meteorito);
 }
 
 //Funcion para el movimiento de los jugadores
@@ -152,9 +161,16 @@ void Panel::decrease(int t)
 
        if (vida2 == 0){
            timer_u->stop();
-           qDebug() <<"Fin del juego";
+           //qDebug() <<"Fin del juego";
            ally_1->detener();
            ally_2->detener();
+           QMessageBox::information(this,"Fin del Juego","Juego Terminado");
+           this->hide();
+           Final(nombre1, nombre2);
+//           Menu_final *menu = new Menu_final();
+//           menu->setNombre_ganador(nombre1);
+//           menu->setNombre_perdedor(nombre2);
+//           menu->show();
        }
     }
     else if (t == 2){
@@ -162,11 +178,27 @@ void Panel::decrease(int t)
        ui->lbl_vida1->setText(QString::number(vida1));
        if (vida1 == 0){
            timer_u->stop();
-           qDebug() <<"Fin del juego";
+           //qDebug() <<"Fin del juego";
            ally_1->detener();
            ally_2->detener();
+           QMessageBox::information(this,"Fin del Juego","Juego Terminado");
+           Final(nombre2, nombre1);
+//           this->hide();
+//           Menu_final *menu = new Menu_final();
+//           menu->setNombre_ganador(nombre2);
+//           menu->setNombre_perdedor(nombre1);
+//           menu->show();
        }
     }
+}
+
+void Panel::Final(QString n1, QString n2)
+{
+    this->hide();
+    Menu_final *menu = new Menu_final();
+    menu->setNombre_ganador(n1);
+    menu->setNombre_perdedor(n2);
+    menu->show();
 }
 
 void Panel::setNombre1(const QString &value)

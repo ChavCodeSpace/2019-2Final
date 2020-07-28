@@ -9,9 +9,11 @@
 #include <QObject>
 #include "oponente.h"
 #include "login.h"
+#include "menu_final.h"
 #include "bala_jugador.h"
 #include "player.h"
 #include "wall.h"
+#include "meteor.h"
 
 class Defensor;
 class Invasor;
@@ -32,6 +34,7 @@ public:
     void setNombre2(const QString &value);
     void keyPressEvent(QKeyEvent *event);
     void decrease(int t);
+    void Final(QString n1, QString n2);
 
 private slots:
     void on_Iniciar_clicked();
@@ -47,8 +50,8 @@ private:
     Player *p1;
     Player *p2;
     QList <Player *> jugadores;
-    int vida1 = 200;
-    int vida2 = 200;
+    int vida1;
+    int vida2;
     QTimer *timer_u;
 
 

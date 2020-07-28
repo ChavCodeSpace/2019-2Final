@@ -5,6 +5,8 @@ release/instrucciones.o
 release/invasor.o
 release/main.o
 release/login.o
+release/menu_final.o
+release/meteor.o
 release/nuevouser.o
 release/oponente.o
 release/panel.o
@@ -17,6 +19,8 @@ release/moc_defensor.o
 release/moc_instrucciones.o
 release/moc_invasor.o
 release/moc_login.o
+release/moc_menu_final.o
+release/moc_meteor.o
 release/moc_nuevouser.o
 release/moc_oponente.o
 release/moc_panel.o

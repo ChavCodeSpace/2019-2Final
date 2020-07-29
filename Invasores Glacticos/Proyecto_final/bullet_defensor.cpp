@@ -1,5 +1,6 @@
 #include "bullet_defensor.h"
 #include <QDebug>
+#include <QMediaPlayer>
 
 extern Panel *p;
 
@@ -12,21 +13,24 @@ Bullet_defensor::Bullet_defensor(double px, double py)
     ang = 45.0;
     setRect(posx,posy,20,20);
 
-    b_a_timer = new QTimer();
-    connect(b_a_timer,SIGNAL(timeout()),this,SLOT(move()));
+    bala_timer = new QTimer();
+    connect(bala_timer,SIGNAL(timeout()),this,SLOT(move()));
 
-    b_a_timer->start(50);
+    bala_timer->start(50);
+
 }
 
 //Funcion para detener el movimiento de la bala
 void Bullet_defensor::detener()
 {
-   b_a_timer->stop();
+   bala_timer->stop();
 }
 
 //Funcion del movimiento de la bala: Parabolico + gravitacional
 void Bullet_defensor::move()
 {
+    QMediaPlayer *sonido_choque = new QMediaPlayer();
+
     vel_x=vel*cos(ang);
     vel_y=vel*sin(ang)-g*delta;
     ang=atan2(vel_y,vel_x);
@@ -39,9 +43,11 @@ void Bullet_defensor::move()
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
         if (typeid (*(colliding_items[i])) == typeid (Player)){
-           scene()->removeItem(this);
-           delete this;
            p->decrease(1);
+           sonido_choque->setMedia(QUrl("qrc:/sounds/explocion.mp3"));
+           sonido_choque->play();
+           scene()->removeItem(this);
+           delete this;           
         }
     }
     //Se elimina el item cuando sale de la escena

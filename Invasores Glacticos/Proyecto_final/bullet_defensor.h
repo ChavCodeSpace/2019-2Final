@@ -22,7 +22,7 @@ private:
     double g = 9.8;
     double delta = 0.1;
     double posy, posx, ang, vel, vel_x, vel_y;
-    QTimer *b_a_timer;
+    QTimer *bala_timer;
 };
 
 #endif // BULLET_DEFENSOR_H

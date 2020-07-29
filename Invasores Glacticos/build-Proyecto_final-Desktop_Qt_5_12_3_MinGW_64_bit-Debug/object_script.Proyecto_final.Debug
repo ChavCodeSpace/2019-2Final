@@ -13,6 +13,7 @@ debug/panel.o
 debug/player.o
 debug/proyectil_invasor.o
 debug/wall.o
+debug/qrc_res.o
 debug/moc_bala_jugador.o
 debug/moc_bullet_defensor.o
 debug/moc_defensor.o

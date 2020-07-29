@@ -28,6 +28,8 @@ void Proyectil_invasor::detener()
 //Funcion del movimiento de la bala: Movimiento Acelerado
 void Proyectil_invasor::move()
 {
+    QMediaPlayer *sonido_choque = new QMediaPlayer();
+
     w = w + alfa * delta;
     fi = fi + w * alfa + 0.5 * alfa * delta * delta;
     setPos(-fi,y());
@@ -35,9 +37,11 @@ void Proyectil_invasor::move()
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
         if (typeid (*(colliding_items[i])) == typeid (Player)){
-           scene()->removeItem(this);
-           delete this;
            p->decrease(2);
+           sonido_choque->setMedia(QUrl("qrc:/sounds/explocion.mp3"));
+           sonido_choque->play();
+           scene()->removeItem(this);
+           delete this;           
         }
     }
     //Se elimina el item cuando sale de la escena

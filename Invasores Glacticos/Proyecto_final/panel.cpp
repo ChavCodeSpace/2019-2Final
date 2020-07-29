@@ -8,6 +8,7 @@
 #include "defensor.h"
 #include "invasor.h"
 
+
 //Universo del juego
 Panel::Panel(QWidget *parent) :
     QWidget(parent),
@@ -50,9 +51,8 @@ Panel::Panel(QWidget *parent) :
     //Timer para el spawn de aliados
     timer_u = new QTimer();
     connect(timer_u,SIGNAL(timeout()),this,SLOT(spawn_enemies()));
-
-
 }
+
 Panel::~Panel()
 {
     delete ui;
@@ -73,10 +73,16 @@ void Panel::on_Iniciar_clicked()
     p2->setPos(720,250);
     scene->addItem(p2);
 
+    //Musica de fondo
+    music = new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/bgmusic.mp3"));
+    music->play();
+
     timer_u->start(6000);
 
 }
 
+//Funcion para poner los enemigos y los meteoritos
 void Panel::spawn_enemies()
 {
     //Aliado superior izquierdo
@@ -101,7 +107,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
         if (event->key() == Qt::Key_W){
             if (jugadores.at(0)->pos().y() > 100){
                 jugadores.at(0)->setPos(jugadores.at(0)->x(),jugadores.at(0)->y()-10);
-                qDebug() << "pos subiendo"<<this->y();
+                //qDebug() << "pos subiendo"<<this->y();
             }
         }
         if (event->key() == Qt::Key_S){
@@ -200,11 +206,12 @@ void Panel::Final(QString n1, QString n2)
         archivo.close();
     }
 
-    //qDebug() <<"Creo el archivo";
+    music->stop();
 
     //Esconde esta ventana y abre la ventana de menu final
     this->hide();
-    menu = new Menu_final();
+    Menu_final *menu = new Menu_final();
+    menu->setModal(true);
     menu->setNombre_ganador(n1);
     menu->setNombre_perdedor(n2);
     menu->show();

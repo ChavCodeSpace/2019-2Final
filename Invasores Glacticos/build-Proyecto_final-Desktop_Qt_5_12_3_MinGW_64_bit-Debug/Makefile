@@ -247,8 +247,10 @@ Makefile: ../Proyecto_final/Proyecto_final.pro C:/Qt/5.12.3/mingw73_64/mkspecs/w
 		C:/Qt/5.12.3/mingw73_64/mkspecs/features/yacc.prf \
 		C:/Qt/5.12.3/mingw73_64/mkspecs/features/lex.prf \
 		../Proyecto_final/Proyecto_final.pro \
+		C:/Qt/5.12.3/mingw73_64/lib/Qt5Multimedia.prl \
 		C:/Qt/5.12.3/mingw73_64/lib/Qt5Widgets.prl \
 		C:/Qt/5.12.3/mingw73_64/lib/Qt5Gui.prl \
+		C:/Qt/5.12.3/mingw73_64/lib/Qt5Network.prl \
 		C:/Qt/5.12.3/mingw73_64/lib/Qt5Core.prl \
 		C:/Qt/5.12.3/mingw73_64/lib/qtmaind.prl
 	$(QMAKE) -o Makefile ..\Proyecto_final\Proyecto_final.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -436,8 +438,10 @@ C:/Qt/5.12.3/mingw73_64/mkspecs/features/exceptions.prf:
 C:/Qt/5.12.3/mingw73_64/mkspecs/features/yacc.prf:
 C:/Qt/5.12.3/mingw73_64/mkspecs/features/lex.prf:
 ../Proyecto_final/Proyecto_final.pro:
+C:/Qt/5.12.3/mingw73_64/lib/Qt5Multimedia.prl:
 C:/Qt/5.12.3/mingw73_64/lib/Qt5Widgets.prl:
 C:/Qt/5.12.3/mingw73_64/lib/Qt5Gui.prl:
+C:/Qt/5.12.3/mingw73_64/lib/Qt5Network.prl:
 C:/Qt/5.12.3/mingw73_64/lib/Qt5Core.prl:
 C:/Qt/5.12.3/mingw73_64/lib/qtmaind.prl:
 qmake: FORCE

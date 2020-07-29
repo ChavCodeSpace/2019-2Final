@@ -7,6 +7,7 @@
 #include <QGraphicsView>
 #include <QTimer>
 #include <QObject>
+#include <QMediaPlayer>
 #include "oponente.h"
 #include "login.h"
 #include "menu_final.h"
@@ -30,8 +31,10 @@ class Panel : public QWidget
 public:
     explicit Panel(QWidget *parent = nullptr);
     ~Panel();    
+
     void setNombre1(const QString &value);
     void setNombre2(const QString &value);
+
     void keyPressEvent(QKeyEvent *event);
     void decrease(int t);
     void Final(QString n1, QString n2);
@@ -53,7 +56,7 @@ private:
     int vida1;
     int vida2;
     QTimer *timer_u;
-    Menu_final *menu;
+    QMediaPlayer *music;
 
 };
 

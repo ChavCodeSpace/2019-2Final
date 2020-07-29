@@ -15,8 +15,8 @@ Defensor::Defensor()
 //Funcion para detener el movimiento del defensor y su bala
 void Defensor::detener()
 {
+    timer->stop();
     bala->detener();
-    timer->stop();    
 }
 
 //Funcion para el movimiento del defensor

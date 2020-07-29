@@ -13,6 +13,7 @@ release/panel.o
 release/player.o
 release/proyectil_invasor.o
 release/wall.o
+release/qrc_res.o
 release/moc_bala_jugador.o
 release/moc_bullet_defensor.o
 release/moc_defensor.o

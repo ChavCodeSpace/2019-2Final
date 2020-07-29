@@ -3,6 +3,7 @@
 
 #include <QDialog>
 
+//Clase del menu final del juego
 namespace Ui {
 class Menu_final;
 }
@@ -15,13 +16,14 @@ public:
     explicit Menu_final(QWidget *parent = nullptr);
     ~Menu_final();
 
+    //Metodos get y set
     void setNombre_ganador(const QString &value);
     QString getNombre_ganador() const;
 
     QString getNombre_perdedor() const;
     void setNombre_perdedor(const QString &value);
 
-private slots:
+private slots:    
     void on_nuevo_juego_clicked();
     void on_tablon_clicked();
     void on_salir_clicked();

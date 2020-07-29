@@ -19,9 +19,11 @@ Panel::Panel(QWidget *parent) :
     scene = new QGraphicsScene(20,100,770,360);
     ui->view->setScene(scene);
 
+    //Desactiva scrollbars
     ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
+    //Muestra la vista
     ui->view->show();
 
     //Vida de los jugadores
@@ -58,6 +60,7 @@ Panel::~Panel()
     delete ui;
 }
 
+//Funcion del boton para iniciar el juego
 void Panel::on_Iniciar_clicked()
 {
     //Setea los nombres y las vidas
@@ -78,6 +81,7 @@ void Panel::on_Iniciar_clicked()
     music->setMedia(QUrl("qrc:/sounds/bgmusic.mp3"));
     music->play();
 
+    //Tiempo universal del juego
     timer_u->start(6000);
 
 }
@@ -101,8 +105,11 @@ void Panel::spawn_enemies()
 }
 
 //Funcion para el movimiento de los jugadores
+//W-S-D para el jugador defensor
+//I-K-J para el jugador invasor
 void Panel::keyPressEvent(QKeyEvent *event)
 {
+    //Movimiento jugador defensor
     if (jugadores.size()>0 && jugadores.size()<2){
         if (event->key() == Qt::Key_W){
             if (jugadores.at(0)->pos().y() > 100){
@@ -116,6 +123,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
                 //qDebug() << "pos bajando"<<this->y();
             }
         }
+        //Disparo de balas jugador defensor
         if (event->key() == Qt::Key_D){
             Bala_jugador *bala = new Bala_jugador(1);
             bala->setPos(jugadores.at(0)->x()+50,jugadores.at(0)->y());
@@ -123,6 +131,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
         }
     }
     else if(jugadores.size()==2){
+        //Movimiento jugador defensor
         if (event->key() == Qt::Key_W){
             if (jugadores.at(0)->pos().y() > 100){
                 jugadores.at(0)->setPos(jugadores.at(0)->x(),jugadores.at(0)->y()-10);
@@ -135,11 +144,13 @@ void Panel::keyPressEvent(QKeyEvent *event)
                 //qDebug() << "pos bajando"<<jugadores.at(0)->y();
             }
         }
+        //Disparo de balas jugador defensor
         if (event->key() == Qt::Key_D){
             Bala_jugador *bala = new Bala_jugador(1);
             bala->setPos(jugadores.at(0)->x()+52,jugadores.at(0)->y()+25);
             scene->addItem(bala);
         }
+        //Movimiento jugador invasor
         if (event->key() == Qt::Key_I){
             if (jugadores.at(1)->pos().y() > 100){
                 jugadores.at(1)->setPos(jugadores.at(1)->x(),jugadores.at(1)->y()-10);
@@ -152,6 +163,7 @@ void Panel::keyPressEvent(QKeyEvent *event)
                 //qDebug() << "pos bajando"<<jugadores.at(1)->y();
             }
         }
+        //Disparo jugador invasor
         if (event->key() == Qt::Key_J){
             Bala_jugador *bala = new Bala_jugador(2);
             bala->setPos(jugadores.at(1)->x()-32,jugadores.at(1)->y()+25);
@@ -166,26 +178,28 @@ void Panel::decrease(int t)
     if (t == 1){
        vida2 -= 10;
        ui->lbl_vida2->setText(QString::number(vida2));
-
+       //Cuando la vida llega a cero acaba el juego
        if (vida2 == 0){
+           //Se detienen todos los timers
            timer_u->stop();
            //qDebug() <<"Fin del juego";
            ally_1->detener();
            ally_2->detener();
            QMessageBox::information(this,"Fin del Juego","Juego Terminado");
-           Final(nombre1, nombre2);
+           Final(nombre1, nombre2);//Funcion del menu final
        }
     }
     else if (t == 2){
        vida1 -= 10;
        ui->lbl_vida1->setText(QString::number(vida1));
+       //Cuando la vida llega a cero acaba el juego
        if (vida1 == 0){
            timer_u->stop();
            //qDebug() <<"Fin del juego";
            ally_1->detener();
            ally_2->detener();
            QMessageBox::information(this,"Fin del Juego","Juego Terminado");
-           Final(nombre2, nombre1);
+           Final(nombre2, nombre1);//Funcion del menu final
        }
     }
 }
@@ -206,6 +220,7 @@ void Panel::Final(QString n1, QString n2)
         archivo.close();
     }
 
+    //Detiene la musica de fondo
     music->stop();
 
     //Esconde esta ventana y abre la ventana de menu final
@@ -217,6 +232,7 @@ void Panel::Final(QString n1, QString n2)
     menu->show();
 }
 
+//Metodos set
 void Panel::setNombre1(const QString &value)
 {
     nombre1 = value;

@@ -35,7 +35,7 @@ public:
         aceptar->setGeometry(QRect(130, 170, 131, 31));
         o_name = new QLineEdit(Oponente);
         o_name->setObjectName(QString::fromUtf8("o_name"));
-        o_name->setGeometry(QRect(110, 110, 171, 31));
+        o_name->setGeometry(QRect(120, 110, 151, 31));
         label = new QLabel(Oponente);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(30, 60, 331, 41));

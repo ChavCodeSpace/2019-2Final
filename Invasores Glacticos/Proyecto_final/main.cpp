@@ -3,7 +3,7 @@
 
 #include <QApplication>
 
-Panel *p;
+Panel *p;//Objeto global del panel principal del juego
 
 int main(int argc, char *argv[])
 {

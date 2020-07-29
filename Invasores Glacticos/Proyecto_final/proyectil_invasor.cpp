@@ -23,12 +23,13 @@ Proyectil_invasor::Proyectil_invasor(double px, double py)
 void Proyectil_invasor::detener()
 {
     b_a_timer->stop();
+    sonido_choque->stop();
 }
 
 //Funcion del movimiento de la bala: Movimiento Acelerado
 void Proyectil_invasor::move()
 {
-    QMediaPlayer *sonido_choque = new QMediaPlayer();
+    sonido_choque = new QMediaPlayer();
 
     w = w + alfa * delta;
     fi = fi + w * alfa + 0.5 * alfa * delta * delta;

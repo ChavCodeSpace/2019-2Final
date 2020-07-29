@@ -13,37 +13,11 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>40</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Ganador</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_ganador">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>110</y>
-     <width>131</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="nuevo_juego">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>200</y>
+     <x>30</x>
+     <y>250</y>
      <width>80</width>
      <height>21</height>
     </rect>
@@ -55,7 +29,7 @@
   <widget class="QPushButton" name="salir">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>290</x>
      <y>250</y>
      <width>80</width>
      <height>21</height>
@@ -68,14 +42,24 @@
   <widget class="QPushButton" name="tablon">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>200</y>
+     <x>40</x>
+     <y>30</y>
      <width>80</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Ver tablon</string>
+    <string>Ver Resultados</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="resultados">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>321</width>
+     <height>161</height>
+    </rect>
    </property>
   </widget>
  </widget>

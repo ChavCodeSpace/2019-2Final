@@ -19,6 +19,7 @@ Nuevouser::~Nuevouser()
     delete ui;
 }
 
+//Funcion del boton para crear un nuevo usuario
 void Nuevouser::on_crearuser_clicked()
 {
     //toma los datos ingresados
@@ -44,6 +45,7 @@ void Nuevouser::on_crearuser_clicked()
 
 }
 
+//Funcion del boton para volver al Login de usuarios
 void Nuevouser::on_atras_clicked()
 {
     this->hide();//Esconde esta ventana

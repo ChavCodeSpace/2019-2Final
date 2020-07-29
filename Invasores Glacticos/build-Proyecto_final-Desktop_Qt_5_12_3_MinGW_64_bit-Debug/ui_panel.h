@@ -39,18 +39,25 @@ public:
         lbl_nombre1 = new QLabel(Panel);
         lbl_nombre1->setObjectName(QString::fromUtf8("lbl_nombre1"));
         lbl_nombre1->setGeometry(QRect(40, 20, 111, 31));
+        QFont font;
+        font.setFamily(QString::fromUtf8("Snap ITC"));
+        font.setPointSize(16);
+        lbl_nombre1->setFont(font);
         lbl_nombre2 = new QLabel(Panel);
         lbl_nombre2->setObjectName(QString::fromUtf8("lbl_nombre2"));
         lbl_nombre2->setGeometry(QRect(650, 20, 121, 31));
+        lbl_nombre2->setFont(font);
         view = new QGraphicsView(Panel);
         view->setObjectName(QString::fromUtf8("view"));
         view->setGeometry(QRect(20, 100, 771, 361));
         lbl_vida1 = new QLabel(Panel);
         lbl_vida1->setObjectName(QString::fromUtf8("lbl_vida1"));
         lbl_vida1->setGeometry(QRect(40, 60, 131, 31));
+        lbl_vida1->setFont(font);
         lbl_vida2 = new QLabel(Panel);
         lbl_vida2->setObjectName(QString::fromUtf8("lbl_vida2"));
         lbl_vida2->setGeometry(QRect(650, 60, 121, 31));
+        lbl_vida2->setFont(font);
 
         retranslateUi(Panel);
 
@@ -61,10 +68,10 @@ public:
     {
         Panel->setWindowTitle(QApplication::translate("Panel", "Form", nullptr));
         Iniciar->setText(QApplication::translate("Panel", "Iniciar", nullptr));
-        lbl_nombre1->setText(QApplication::translate("Panel", "TextLabel", nullptr));
-        lbl_nombre2->setText(QApplication::translate("Panel", "TextLabel", nullptr));
-        lbl_vida1->setText(QApplication::translate("Panel", "TextLabel", nullptr));
-        lbl_vida2->setText(QApplication::translate("Panel", "TextLabel", nullptr));
+        lbl_nombre1->setText(QString());
+        lbl_nombre2->setText(QString());
+        lbl_vida1->setText(QString());
+        lbl_vida2->setText(QString());
     } // retranslateUi
 
 };

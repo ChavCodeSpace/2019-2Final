@@ -17,6 +17,7 @@ Instrucciones::~Instrucciones()
 
 void Instrucciones::on_atras_clicked()
 {
+    //Esconde esta ventana y abre una nueva de Login
     this->hide();
     Login *w = new Login();
     w->show();

@@ -1,8 +1,8 @@
 #include "bullet_defensor.h"
 #include <QDebug>
-#include <QMediaPlayer>
 
-extern Panel *p;
+
+extern Panel *p;//Objeto global del panel principal del juego
 
 //Bala del defensor
 Bullet_defensor::Bullet_defensor(double px, double py)
@@ -24,12 +24,13 @@ Bullet_defensor::Bullet_defensor(double px, double py)
 void Bullet_defensor::detener()
 {
    bala_timer->stop();
+   sonido_choque->stop();
 }
 
 //Funcion del movimiento de la bala: Parabolico + gravitacional
 void Bullet_defensor::move()
 {
-    QMediaPlayer *sonido_choque = new QMediaPlayer();
+    sonido_choque = new QMediaPlayer();
 
     vel_x=vel*cos(ang);
     vel_y=vel*sin(ang)-g*delta;

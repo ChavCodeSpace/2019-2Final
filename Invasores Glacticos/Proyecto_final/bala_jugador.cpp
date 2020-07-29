@@ -2,7 +2,7 @@
 #include <QDebug>
 #include <QMediaPlayer>
 
-extern Panel *p;
+extern Panel *p;//Objeto global del panel principal del juego
 
 //Balas de los jugadores
 Bala_jugador::Bala_jugador(int t)
@@ -11,7 +11,7 @@ Bala_jugador::Bala_jugador(int t)
     QMediaPlayer *bala_sonido = new QMediaPlayer();
 
     QTimer *b_timer = new QTimer();
-    //Dependiendo si es el jugador 1 o 2, se conecta el timer a una funcion de movimiento diferente.
+    //Dependiendo si es el jugador 1 o 2, se conecta el timer a una funcion de movimiento diferente y reproduce un sonido diferente.
     if (t == 1){
        connect(b_timer,SIGNAL(timeout()),this, SLOT(bullet_move_rigth()));//balas hacia la derecha
        bala_sonido->setMedia(QUrl("qrc:/sounds/bullet blast.mp3"));

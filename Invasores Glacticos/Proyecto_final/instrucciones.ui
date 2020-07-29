@@ -42,7 +42,11 @@
     </rect>
    </property>
    <property name="text">
-    <string>Invasores Galactivos es un juego de jugador contra jugador en donde un jugador representa la tierra y el otro representa los invasores</string>
+    <string>Bienvenido a Invasores Galacticos; un juego de jugador contra jugador en el que un bando representa la tierra y el otro representa los invasores galacticos.
+El jugador del lado izquierdo es el terrestre, este jugador se mueve a arriba con la tecla W, abajo con la tecla S y dispara con la tecla D.
+El jugador del lado derecho es el invasor, este se mueve a arriba con la tecla I, abajo con la tecla K y dispara con la tecla J.
+En el juego hay un aliado de cada bando, el cual aparece en pantalla y dispara un proyectil a su adversario.
+Gana quien deje sin puntos de vida al rival.</string>
    </property>
    <property name="textFormat">
     <enum>Qt::AutoText</enum>

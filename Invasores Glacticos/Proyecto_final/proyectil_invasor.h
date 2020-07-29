@@ -5,6 +5,7 @@
 #include <QGraphicsRectItem>
 #include <math.h>
 #include <QTimer>
+#include <QMediaPlayer>
 #include "panel.h"
 
 //Clase de la bala del invasor
@@ -19,8 +20,10 @@ public slots:
     void move();
 
 private:
+    //Atributos para el movimiento acelerado
     double fi, w, alfa, delta, posx, posy;
     QTimer *b_a_timer;
+    QMediaPlayer *sonido_choque;
 };
 
 #endif // PROYECTIL_INVASOR_H

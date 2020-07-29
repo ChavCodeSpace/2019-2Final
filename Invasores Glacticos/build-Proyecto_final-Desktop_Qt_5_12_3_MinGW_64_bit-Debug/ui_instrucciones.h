@@ -54,7 +54,11 @@ public:
     {
         Instrucciones->setWindowTitle(QApplication::translate("Instrucciones", "Dialog", nullptr));
         titulo->setText(QApplication::translate("Instrucciones", "Instrucciones", nullptr));
-        label->setText(QApplication::translate("Instrucciones", "Invasores Galactivos es un juego de jugador contra jugador en donde un jugador representa la tierra y el otro representa los invasores", nullptr));
+        label->setText(QApplication::translate("Instrucciones", "Bienvenido a Invasores Galacticos; un juego de jugador contra jugador en el que un bando representa la tierra y el otro representa los invasores galacticos.\n"
+"El jugador del lado izquierdo es el terrestre, este jugador se mueve a arriba con la tecla W, abajo con la tecla S y dispara con la tecla D.\n"
+"El jugador del lado derecho es el invasor, este se mueve a arriba con la tecla I, abajo con la tecla K y dispara con la tecla J.\n"
+"En el juego hay un aliado de cada bando, el cual aparece en pantalla y dispara un proyectil a su adversario.\n"
+"Gana quien deje sin puntos de vida al rival.", nullptr));
         atras->setText(QApplication::translate("Instrucciones", "Atras", nullptr));
     } // retranslateUi
 

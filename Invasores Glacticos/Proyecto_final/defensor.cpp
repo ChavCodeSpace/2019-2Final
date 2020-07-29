@@ -14,7 +14,7 @@ Defensor::Defensor()
 
 //Funcion para detener el movimiento del defensor y su bala
 void Defensor::detener()
-{
+{    
     timer->stop();
     bala->detener();
 }
@@ -26,6 +26,7 @@ void Defensor::move()
     setPos(x(),y()+60);
     bala = new Bullet_defensor(this->x()+30,this->y());
     scene()->addItem(bala);
+    //Se elimina el objeto cuando sale de los limites de la escena
     if (pos().y() > 420.0){
         scene()->removeItem(this);
         delete this;

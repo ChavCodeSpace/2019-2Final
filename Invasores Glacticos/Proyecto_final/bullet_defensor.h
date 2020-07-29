@@ -5,6 +5,7 @@
 #include <QGraphicsRectItem>
 #include <math.h>
 #include <QTimer>
+#include <QMediaPlayer>
 #include "panel.h"
 
 //Clase de la bala del defensor
@@ -19,10 +20,12 @@ public slots:
     void move();
 
 private:
+    //Atributos para el movimiento parabolico y gravitacional
     double g = 9.8;
     double delta = 0.1;
     double posy, posx, ang, vel, vel_x, vel_y;
     QTimer *bala_timer;
+    QMediaPlayer *sonido_choque;
 };
 
 #endif // BULLET_DEFENSOR_H

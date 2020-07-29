@@ -1,6 +1,7 @@
 #include "meteor.h"
 #include <QDebug>
 
+//Meteoritos
 Meteor::Meteor()
 {
     setRect(0,0,30,30);
@@ -14,10 +15,11 @@ Meteor::Meteor()
     timer->start(50);
 }
 
+//Funcion del movimiento en caida libre de los meteoritos
 void Meteor::Caer()
 {
     setPos(x(),y()+5);
-
+    //Se elimina el objeto cuando sale de los limites de la escena
     if (pos().y() > 430.0){
         scene()->removeItem(this);
         delete this;

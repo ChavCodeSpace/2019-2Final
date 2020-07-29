@@ -63,7 +63,7 @@ void Login::on_Validar_clicked()
 //Boton para mostrar las instrucciones
 void Login::on_instrucciones_clicked()
 {
-    this->hide();
+    this->hide();//Esconde esta ventana
     Instrucciones *I = new Instrucciones();
     I->setModal(true);//Cuando esta instruccion es verdadera, la ventana es emergente
     I->show();

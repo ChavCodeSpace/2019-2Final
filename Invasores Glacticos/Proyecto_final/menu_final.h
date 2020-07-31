@@ -30,6 +30,7 @@ private slots:
 
 private:
     Ui::Menu_final *ui;
+    //variables para guardar el archivo
     QString nombre_ganador;
     QString nombre_perdedor;
 };

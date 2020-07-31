@@ -84,6 +84,7 @@ void Login::on_salir_clicked()
     this->close();//Cierra la aplicacion.
 }
 
+//Metodos get y set
 QString Login::getName() const
 {
     return name;

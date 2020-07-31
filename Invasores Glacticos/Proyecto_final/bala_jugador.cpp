@@ -11,7 +11,8 @@ Bala_jugador::Bala_jugador(int t)
     QMediaPlayer *bala_sonido = new QMediaPlayer();
 
     QTimer *b_timer = new QTimer();
-    //Dependiendo si es el jugador 1 o 2, se conecta el timer a una funcion de movimiento diferente y reproduce un sonido diferente.
+    //Dependiendo si es el jugador 1 o 2, se conecta el timer a una funcion de movimiento diferente,
+    //reproduce un sonido diferente y pone una imagen diferente.
     if (t == 1){
        connect(b_timer,SIGNAL(timeout()),this, SLOT(bullet_move_rigth()));//balas hacia la derecha
        setPixmap(QPixmap(":/images/Bala terrestre.png"));//Dibuja la bala
@@ -66,10 +67,10 @@ void Bala_jugador::bullet_move_left()
 //Funcion del movimiento de la bala hacia la derecha
 void Bala_jugador::bullet_move_rigth()
 {
-    QMediaPlayer *sonido_choque = new QMediaPlayer();
+    QMediaPlayer *sonido_choque = new QMediaPlayer();//sonido de fondo
 
     setPos(x()+40,y());
-    //this->choque(2);
+    //Cuando la bala sale de la escena se elimina
     if(this->pos().x()>770){
         scene()->removeItem(this);
         delete this;
@@ -78,6 +79,7 @@ void Bala_jugador::bullet_move_rigth()
     //Coliciones con los jugadores
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
+        //Cuando choca con jugadores se elimina
         if (typeid (*(colliding_items[i])) == typeid (Player)){
            scene()->removeItem(this);
            sonido_choque->setMedia(QUrl("qrc:/sounds/explocion.mp3"));
@@ -85,6 +87,7 @@ void Bala_jugador::bullet_move_rigth()
            delete this;
            p->decrease(1);
         }
+        //Cuando choca con un obstaculo se elimina
         if (typeid (*(colliding_items[i])) == typeid (Wall)){
            sonido_choque->setMedia(QUrl("qrc:/sounds/choques.mp3"));
            sonido_choque->play();

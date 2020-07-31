@@ -23,8 +23,8 @@ public slots:
 private:
     //Atributos para el movimiento acelerado
     double fi, w, alfa, delta, posx, posy;
-    QTimer *b_a_timer;
-    QMediaPlayer *sonido_choque;
+    QTimer *b_a_timer;//timer para el movimiento
+    QMediaPlayer *sonido_choque;//musica de colision
 };
 
 #endif // PROYECTIL_INVASOR_H

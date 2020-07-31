@@ -15,11 +15,11 @@ class Bala_jugador: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    Bala_jugador(int t);
+    Bala_jugador(int t);//Constructor
 
 public slots:
-    void bullet_move_rigth();
-    void bullet_move_left();
+    void bullet_move_rigth();//movimiento derecho
+    void bullet_move_left();//movimiento izquierdo
 
 };
 

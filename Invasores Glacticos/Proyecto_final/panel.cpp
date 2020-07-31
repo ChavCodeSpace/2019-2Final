@@ -19,14 +19,13 @@ Panel::Panel(QWidget *parent) :
     ui->setupUi(this);
     //Escena
     scene = new QGraphicsScene(20,100,770,360);
+    //Fondo de la escena
     scene->setBackgroundBrush(QBrush(QImage(":/images/bg.jpg")));
     ui->view->setScene(scene);
 
     //Desactiva scrollbars
     ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
-
 
     //Muestra la vista
     ui->view->show();

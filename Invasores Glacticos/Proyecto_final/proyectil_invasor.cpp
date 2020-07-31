@@ -15,6 +15,7 @@ Proyectil_invasor::Proyectil_invasor(double px, double py)
     posx = px;
     posy = py;
     setRect(px,py,15,15);
+    //dibuja la bala dentro del rectangulo
     this->setBrush(QBrush(QPixmap(":/images/Bala_pasiva_invasor.png")));
 
     b_a_timer = new QTimer();

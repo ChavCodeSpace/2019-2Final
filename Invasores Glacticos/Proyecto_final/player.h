@@ -8,7 +8,7 @@
 class Player: public QGraphicsPixmapItem
 {
 public:
-    Player(int t);
+    Player(int t);//Constructor
 };
 
 #endif // PLAYER_H

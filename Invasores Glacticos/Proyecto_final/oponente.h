@@ -16,6 +16,7 @@ public:
     explicit Oponente(QWidget *parent = nullptr);
     ~Oponente();    
 
+    //Metodos get y set
     QString getNombre_oponente() const;
     QString getNombre_jugador() const;
 
@@ -27,6 +28,7 @@ private slots:
 
 private:
     Ui::Oponente *ui;
+    //Variables para los nombres de los jugadores
     QString nombre_oponente;
     QString nombre_jugador;
 };

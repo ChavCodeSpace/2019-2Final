@@ -7,7 +7,7 @@
 class Wall: public QGraphicsPixmapItem
 {
 public:
-    Wall();
+    Wall();//Constructor
 };
 
 #endif // WALL_H

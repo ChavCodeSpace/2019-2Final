@@ -8,6 +8,7 @@ Meteor::Meteor()
     //setRect(0,0,30,30);
     setPixmap(QPixmap(":/images/Meteorito.png"));
 
+    //Toma un numero random para la posicion
     int random_number = (rand() % 600) + 100;
     setPos(random_number,0);
 

@@ -15,7 +15,7 @@ Bullet_defensor::Bullet_defensor(double px, double py)
     vel = 60.0;
     ang = 45.0;
     setRect(posx,posy,20,20);
-    this->setBrush(QBrush(QPixmap(":/images/Bala_pasiva_invasor.png")));
+    this->setBrush(QBrush(QPixmap(":/images/Bala_pasiva_invasor.png")));//Dibuja la bala
 
     bala_timer = new QTimer();
     connect(bala_timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -27,15 +27,15 @@ Bullet_defensor::Bullet_defensor(double px, double py)
 //Funcion para detener el movimiento de la bala
 void Bullet_defensor::detener()
 {
-   qDebug() << "entre a detener";
+   //qDebug() << "entre a detener";
    bala_timer->stop();
    sonido_choque->stop();
 }
 
-//Funcion del movimiento de la bala: Parabolico + gravitacional
+//Funcion del movimiento de la bala: Parabolico + Gravitacional
 void Bullet_defensor::move()
 {
-    sonido_choque = new QMediaPlayer();
+    sonido_choque = new QMediaPlayer();//sonido de choque
 
     vel_x=vel*cos(ang);
     vel_y=vel*sin(ang)-g*delta;
@@ -49,6 +49,7 @@ void Bullet_defensor::move()
     //Coliciones con los jugadores
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){
+        //Al colisionar con un jugador se elimina
         if (typeid (*(colliding_items[i])) == typeid (Player)){
            p->decrease(1);
            sonido_choque->setMedia(QUrl("qrc:/sounds/explocion.mp3"));

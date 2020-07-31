@@ -31,6 +31,7 @@ private slots:
 
 private:
     Ui::Login *ui;
+    //variables para el login
     QString name;
     QString pass;
 };

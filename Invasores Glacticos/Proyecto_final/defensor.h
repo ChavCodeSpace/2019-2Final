@@ -14,7 +14,7 @@ class Defensor: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    Defensor();
+    Defensor();//Constructor
     void detener();
 
     //QList<Bullet_defensor *> getBalas() const;
@@ -23,7 +23,7 @@ public slots:
     void move();
 
 private:
-    QTimer *timer;
+    QTimer *timer;//timer para el movimiento
     Bullet_defensor *bala;
 
     //QList <Bullet_defensor *> balas;

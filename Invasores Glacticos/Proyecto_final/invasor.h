@@ -13,7 +13,7 @@ class Invasor: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
-    Invasor();
+    Invasor();//constructor
     void detener();
 
 public slots:
@@ -21,7 +21,7 @@ public slots:
 
 private:
     QTimer *timer;
-    Proyectil_invasor *bala;
+    Proyectil_invasor *bala;//Objeto para la bala del invasor
 };
 
 #endif // INVASOR_H

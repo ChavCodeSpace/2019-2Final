@@ -32,12 +32,13 @@ public:
     explicit Panel(QWidget *parent = nullptr);
     ~Panel();    
 
-    void setNombre1(const QString &value);
-    void setNombre2(const QString &value);
-
     void keyPressEvent(QKeyEvent *event);
     void decrease(int t);
     void Final(QString n1, QString n2);
+
+    //Metodos set
+    void setNombre1(const QString &value);
+    void setNombre2(const QString &value);
 
 private slots:
     void on_Iniciar_clicked();
@@ -45,9 +46,12 @@ private slots:
 
 private:
     Ui::Panel *ui;
+    //Objeto de escena
+    QGraphicsScene *scene;
+    //Variables para los nombres los jugadores
     QString nombre1;
     QString nombre2;
-    QGraphicsScene *scene;
+    //Objetos del juego
     Defensor *ally_1;
     Invasor *ally_2;
     Player *p1;
@@ -55,7 +59,9 @@ private:
     QList <Player *> jugadores;
     int vida1;
     int vida2;
+    //Tiempo del juego
     QTimer *timer_u;
+    //Musica de fondo
     QMediaPlayer *music;
 
 };

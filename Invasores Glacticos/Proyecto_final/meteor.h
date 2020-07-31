@@ -8,6 +8,7 @@
 #include <QTimer>
 #include <stdlib.h>
 
+//Clase del meteorito
 class Meteor: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT

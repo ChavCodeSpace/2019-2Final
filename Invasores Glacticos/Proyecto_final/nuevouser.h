@@ -23,6 +23,7 @@ private slots:
 
 private:
     Ui::Nuevouser *ui;
+    //variables para el registro de usuarios
     QString n_name;
     QString n_pass;
 };

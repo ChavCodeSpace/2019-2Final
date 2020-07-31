@@ -15,8 +15,8 @@ class Bullet_defensor: public QObject, public QGraphicsRectItem
 {
     Q_OBJECT
 public:
-    Bullet_defensor(double px, double py);
-    void detener();   
+    Bullet_defensor(double px, double py);//Constructor
+    void detener();
 
 public slots:
     void move();
@@ -26,8 +26,8 @@ private:
     double g = 9.8;
     double delta = 0.1;
     double posy, posx, ang, vel, vel_x, vel_y;
-    QTimer *bala_timer;
-    QMediaPlayer *sonido_choque;
+    QTimer *bala_timer;//timer para el movimiento
+    QMediaPlayer *sonido_choque;//musica de colision
 };
 
 #endif // BULLET_DEFENSOR_H

@@ -22,7 +22,7 @@ Oponente::~Oponente()
 void Oponente::on_aceptar_clicked()
 {
     //captura el nombre ingresado y lo guarda
-    QString aux;
+    QString aux;//auxiliar para el nombre
     aux = ui->o_name->text();
     setNombre_oponente(aux);
     //qDebug() << this->getNombre_oponente();

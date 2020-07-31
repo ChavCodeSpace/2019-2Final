@@ -4,7 +4,9 @@
 //Meteoritos
 Meteor::Meteor()
 {
-    setRect(0,0,30,30);
+    //Dibuja el meteorito
+    //setRect(0,0,30,30);
+    setPixmap(QPixmap(":/images/Meteorito.png"));
 
     int random_number = (rand() % 600) + 100;
     setPos(random_number,0);

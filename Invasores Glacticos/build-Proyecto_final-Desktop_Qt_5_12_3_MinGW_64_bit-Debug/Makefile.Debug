@@ -175,6 +175,17 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_res.cpp
 debug/qrc_res.cpp: ../Proyecto_final/res.qrc \
 		C:/Qt/5.12.3/mingw73_64/bin/rcc.exe \
+		../Proyecto_final/Obstaculos.png \
+		../Proyecto_final/PJ\ Invasor.png \
+		../Proyecto_final/Bala\ terrestre.png \
+		../Proyecto_final/Bala\ invasora.png \
+		../Proyecto_final/bg.jpg \
+		../Proyecto_final/Aliado\ Terrestre.png \
+		../Proyecto_final/Bala_pasiva_invasor.png \
+		../Proyecto_final/PJ\ Terrestre.png \
+		../Proyecto_final/Bala_pasiva_terreste.png \
+		../Proyecto_final/Aliado\ Invasor.png \
+		../Proyecto_final/Meteorito.png \
 		../Proyecto_final/laser\ blast.mp3 \
 		../Proyecto_final/explocion.mp3 \
 		../Proyecto_final/choques.mp3 \
@@ -281,6 +292,7 @@ debug/moc_bala_jugador.cpp: ../Proyecto_final/bala_jugador.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qbrush.h \
@@ -313,6 +325,25 @@ debug/moc_bala_jugador.cpp: ../Proyecto_final/bala_jugador.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qscrollarea.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/oponente.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdialog.h \
@@ -420,9 +451,31 @@ debug/moc_bullet_defensor.cpp: ../Proyecto_final/bullet_defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -435,8 +488,6 @@ debug/moc_bullet_defensor.cpp: ../Proyecto_final/bullet_defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -559,6 +610,7 @@ debug/moc_defensor.cpp: ../Proyecto_final/defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
@@ -568,6 +620,27 @@ debug/moc_defensor.cpp: ../Proyecto_final/defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
 		../Proyecto_final/bullet_defensor.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -578,8 +651,6 @@ debug/moc_defensor.cpp: ../Proyecto_final/defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -808,6 +879,7 @@ debug/moc_invasor.cpp: ../Proyecto_final/invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
@@ -817,6 +889,27 @@ debug/moc_invasor.cpp: ../Proyecto_final/invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
 		../Proyecto_final/proyectil_invasor.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -827,8 +920,6 @@ debug/moc_invasor.cpp: ../Proyecto_final/invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -1168,6 +1259,7 @@ debug/moc_meteor.cpp: ../Proyecto_final/meteor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qbrush.h \
@@ -1519,6 +1611,25 @@ debug/moc_panel.cpp: ../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/oponente.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdialog.h \
@@ -1531,6 +1642,7 @@ debug/moc_panel.cpp: ../Proyecto_final/panel.h \
 		../Proyecto_final/bala_jugador.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsRectItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		../Proyecto_final/panel.h \
 		../Proyecto_final/player.h \
 		../Proyecto_final/wall.h \
@@ -1629,9 +1741,31 @@ debug/moc_proyectil_invasor.cpp: ../Proyecto_final/proyectil_invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -1644,8 +1778,6 @@ debug/moc_proyectil_invasor.cpp: ../Proyecto_final/proyectil_invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -1811,6 +1943,7 @@ debug/bala_jugador.o: ../Proyecto_final/bala_jugador.cpp ../Proyecto_final/bala_
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qbrush.h \
@@ -1843,6 +1976,25 @@ debug/bala_jugador.o: ../Proyecto_final/bala_jugador.cpp ../Proyecto_final/bala_
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qscrollarea.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/oponente.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdialog.h \
@@ -1948,9 +2100,31 @@ debug/bullet_defensor.o: ../Proyecto_final/bullet_defensor.cpp ../Proyecto_final
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -1963,8 +2137,6 @@ debug/bullet_defensor.o: ../Proyecto_final/bullet_defensor.cpp ../Proyecto_final
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -1993,26 +2165,7 @@ debug/bullet_defensor.o: ../Proyecto_final/bullet_defensor.cpp ../Proyecto_final
 		../Proyecto_final/player.h \
 		../Proyecto_final/wall.h \
 		../Proyecto_final/meteor.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QDebug \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\bullet_defensor.o ..\Proyecto_final\bullet_defensor.cpp
 
 debug/defensor.o: ../Proyecto_final/defensor.cpp ../Proyecto_final/defensor.h \
@@ -2105,6 +2258,7 @@ debug/defensor.o: ../Proyecto_final/defensor.cpp ../Proyecto_final/defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
@@ -2114,6 +2268,27 @@ debug/defensor.o: ../Proyecto_final/defensor.cpp ../Proyecto_final/defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
 		../Proyecto_final/bullet_defensor.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -2124,8 +2299,6 @@ debug/defensor.o: ../Proyecto_final/defensor.cpp ../Proyecto_final/defensor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -2259,25 +2432,11 @@ debug/instrucciones.o: ../Proyecto_final/instrucciones.cpp ../Proyecto_final/ins
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_instrucciones.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		../Proyecto_final/login.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmainwindow.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\instrucciones.o ..\Proyecto_final\instrucciones.cpp
 
 debug/invasor.o: ../Proyecto_final/invasor.cpp ../Proyecto_final/invasor.h \
@@ -2370,6 +2529,7 @@ debug/invasor.o: ../Proyecto_final/invasor.cpp ../Proyecto_final/invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
@@ -2379,6 +2539,27 @@ debug/invasor.o: ../Proyecto_final/invasor.cpp ../Proyecto_final/invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
 		../Proyecto_final/proyectil_invasor.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -2389,8 +2570,6 @@ debug/invasor.o: ../Proyecto_final/invasor.cpp ../Proyecto_final/invasor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -2543,6 +2722,25 @@ debug/main.o: ../Proyecto_final/main.cpp ../Proyecto_final/login.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/oponente.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdialog.h \
@@ -2550,6 +2748,7 @@ debug/main.o: ../Proyecto_final/main.cpp ../Proyecto_final/login.h \
 		../Proyecto_final/bala_jugador.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsRectItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		../Proyecto_final/player.h \
 		../Proyecto_final/wall.h \
 		../Proyecto_final/meteor.h \
@@ -2670,34 +2869,6 @@ debug/login.o: ../Proyecto_final/login.cpp ../Proyecto_final/login.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		ui_login.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMenuBar \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QStatusBar \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		../Proyecto_final/nuevouser.h \
 		../Proyecto_final/instrucciones.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
@@ -2815,21 +2986,6 @@ debug/menu_final.o: ../Proyecto_final/menu_final.cpp ../Proyecto_final/menu_fina
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_menu_final.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/QList \
@@ -2842,21 +2998,45 @@ debug/menu_final.o: ../Proyecto_final/menu_final.cpp ../Proyecto_final/menu_fina
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qscrollarea.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/oponente.h \
 		../Proyecto_final/login.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		../Proyecto_final/bala_jugador.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsRectItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		../Proyecto_final/player.h \
 		../Proyecto_final/wall.h \
-		../Proyecto_final/meteor.h
+		../Proyecto_final/meteor.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTextStream
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\menu_final.o ..\Proyecto_final\menu_final.cpp
 
 debug/meteor.o: ../Proyecto_final/meteor.cpp ../Proyecto_final/meteor.h \
@@ -2949,6 +3129,7 @@ debug/meteor.o: ../Proyecto_final/meteor.cpp ../Proyecto_final/meteor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qbrush.h \
@@ -3068,34 +3249,6 @@ debug/nuevouser.o: ../Proyecto_final/nuevouser.cpp ../Proyecto_final/nuevouser.h
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		ui_nuevouser.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMenuBar \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qactiongroup.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QStatusBar \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		../Proyecto_final/login.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QFile \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTextStream \
@@ -3211,49 +3364,52 @@ debug/oponente.o: ../Proyecto_final/oponente.cpp ../Proyecto_final/oponente.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_oponente.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/QList \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpen.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsView \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsview.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpainter.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qscrollarea.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qframe.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QObject \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/login.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
 		../Proyecto_final/menu_final.h \
 		../Proyecto_final/bala_jugador.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsRectItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		../Proyecto_final/player.h \
 		../Proyecto_final/wall.h \
 		../Proyecto_final/meteor.h \
@@ -3379,41 +3535,6 @@ debug/panel.o: ../Proyecto_final/panel.cpp ../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QObject \
-		../Proyecto_final/oponente.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdialog.h \
-		../Proyecto_final/login.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMainWindow \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmainwindow.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
-		../Proyecto_final/menu_final.h \
-		../Proyecto_final/bala_jugador.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsitem.h \
-		../Proyecto_final/player.h \
-		../Proyecto_final/wall.h \
-		../Proyecto_final/meteor.h \
-		ui_panel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QDebug \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsItem \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMessageBox \
-		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmessagebox.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QFile \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTextStream \
 		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
 		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
@@ -3428,10 +3549,36 @@ debug/panel.o: ../Proyecto_final/panel.cpp ../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
 		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
+		../Proyecto_final/oponente.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QDialog \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qdialog.h \
+		../Proyecto_final/login.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMainWindow \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmainwindow.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qicon.h \
+		../Proyecto_final/menu_final.h \
+		../Proyecto_final/bala_jugador.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsRectItem \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
+		../Proyecto_final/player.h \
+		../Proyecto_final/wall.h \
+		../Proyecto_final/meteor.h \
+		ui_panel.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QDebug \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsItem \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTextStream \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/QBrush \
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/QImage \
 		../Proyecto_final/defensor.h \
 		../Proyecto_final/bullet_defensor.h \
 		../Proyecto_final/invasor.h \
@@ -3526,7 +3673,8 @@ debug/player.o: ../Proyecto_final/player.cpp ../Proyecto_final/player.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qrgba64.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\player.o ..\Proyecto_final\player.cpp
 
 debug/proyectil_invasor.o: ../Proyecto_final/proyectil_invasor.cpp ../Proyecto_final/proyectil_invasor.h \
@@ -3619,9 +3767,31 @@ debug/proyectil_invasor.o: ../Proyecto_final/proyectil_invasor.cpp ../Proyecto_f
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimediaglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qtmultimedia-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QString \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QUrl \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/QVariant \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtCore/qmetaobject.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtNetwork/qnetworkconfiguration.h \
 		../Proyecto_final/panel.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/qwidget.h \
@@ -3634,8 +3804,6 @@ debug/proyectil_invasor.o: ../Proyecto_final/proyectil_invasor.cpp ../Proyecto_f
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qkeysequence.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qevent.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurl.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qvector2d.h \
@@ -3754,7 +3922,8 @@ debug/wall.o: ../Proyecto_final/wall.cpp ../Proyecto_final/wall.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qrgba64.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.3/mingw73_64/include/QtGui/qpixelformat.h \
-		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h
+		C:/Qt/5.12.3/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.3/mingw73_64/include/QtWidgets/QGraphicsPixmapItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\wall.o ..\Proyecto_final\wall.cpp
 
 debug/qrc_res.o: debug/qrc_res.cpp 

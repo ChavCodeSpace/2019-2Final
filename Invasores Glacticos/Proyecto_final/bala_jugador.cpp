@@ -7,18 +7,20 @@ extern Panel *p;//Objeto global del panel principal del juego
 //Balas de los jugadores
 Bala_jugador::Bala_jugador(int t)
 {
-    setRect(0,0,30,10);
+    //setRect(0,0,30,10);
     QMediaPlayer *bala_sonido = new QMediaPlayer();
 
     QTimer *b_timer = new QTimer();
     //Dependiendo si es el jugador 1 o 2, se conecta el timer a una funcion de movimiento diferente y reproduce un sonido diferente.
     if (t == 1){
        connect(b_timer,SIGNAL(timeout()),this, SLOT(bullet_move_rigth()));//balas hacia la derecha
-       bala_sonido->setMedia(QUrl("qrc:/sounds/bullet blast.mp3"));
+       setPixmap(QPixmap(":/images/Bala terrestre.png"));//Dibuja la bala
+       bala_sonido->setMedia(QUrl("qrc:/sounds/bullet blast.mp3"));//reproduce el sonido
        bala_sonido->play();
     }
     else if (t == 2){
         connect(b_timer,SIGNAL(timeout()),this, SLOT(bullet_move_left()));//balas hacia la izquierda
+        setPixmap(QPixmap(":/images/Bala invasora.png"));
         bala_sonido->setMedia(QUrl("qrc:/sounds/laser blast.mp3"));
         bala_sonido->play();
     }

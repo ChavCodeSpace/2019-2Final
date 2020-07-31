@@ -4,7 +4,9 @@
 //Aliado invasor
 Invasor::Invasor()
 {
-   setRect(0,0,30,60);
+    //Dibuja el invasor
+   //setRect(0,0,30,60);
+   setPixmap(QPixmap(":/images/Aliado Invasor.png"));
 
    timer = new QTimer();
    connect(timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -25,6 +27,7 @@ void Invasor::move()
     //Se mueve y dispara
     setPos(x(),y()-60);
     bala = new Proyectil_invasor(this->x()-20, this->y());
+    //bala->setPixmap(QPixmap(":/images/Bala pasiva invasor.png"));
     scene()->addItem(bala);
     //Se elimina el objeto cuando sale de los limites de la escena
     if (pos().y()<40.0){

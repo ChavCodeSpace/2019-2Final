@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <math.h>
 #include <QTimer>
 #include <QMediaPlayer>

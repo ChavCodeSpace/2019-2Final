@@ -6,4 +6,17 @@
         <file>laser blast.mp3</file>
         <file>bgmusic.mp3</file>
     </qresource>
+    <qresource prefix="/images">
+        <file>Aliado Invasor.png</file>
+        <file>Aliado Terrestre.png</file>
+        <file>Bala invasora.png</file>
+        <file>Bala terrestre.png</file>
+        <file>bg.jpg</file>
+        <file>Meteorito.png</file>
+        <file>Obstaculos.png</file>
+        <file>PJ Invasor.png</file>
+        <file>PJ Terrestre.png</file>
+        <file>Bala_pasiva_invasor.png</file>
+        <file>Bala_pasiva_terreste.png</file>
+    </qresource>
 </RCC>

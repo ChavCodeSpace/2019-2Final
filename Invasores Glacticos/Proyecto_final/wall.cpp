@@ -3,5 +3,7 @@
 //Obstaculos
 Wall::Wall()
 {
-    setRect(0,0,20,80);
+    //Dibuja el muro
+    //setRect(0,0,20,80);
+    setPixmap(QPixmap(":/images/Obstaculos.png"));
 }

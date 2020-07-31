@@ -3,11 +3,12 @@
 
 #include <QObject>
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 #include <QTimer>
 #include <stdlib.h>
 
-class Meteor: public QObject, public QGraphicsRectItem
+class Meteor: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:

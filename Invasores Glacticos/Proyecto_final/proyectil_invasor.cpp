@@ -5,6 +5,9 @@ extern Panel *p;//Panel del general universo del juego
 //Bala del invasor
 Proyectil_invasor::Proyectil_invasor(double px, double py)
 {
+    //Dibuja la bala
+    //setPixmap(QPixmap(":/images/Bala_pasiva_invasor.png"));
+
     fi = 3.14;
     w = 2.5;
     alfa = 2.5;
@@ -12,6 +15,7 @@ Proyectil_invasor::Proyectil_invasor(double px, double py)
     posx = px;
     posy = py;
     setRect(px,py,15,15);
+    this->setBrush(QBrush(QPixmap(":/images/Bala_pasiva_invasor.png")));
 
     b_a_timer = new QTimer();
     connect(b_a_timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -34,6 +38,7 @@ void Proyectil_invasor::move()
     w = w + alfa * delta;
     fi = fi + w * alfa + 0.5 * alfa * delta * delta;
     setPos(-fi,y());
+    //qDebug()<<"bala INVASORA en "<<this->x();
     //Coliciones con los jugadores
     QList <QGraphicsItem *> colliding_items = collidingItems();
     for (int i=0, n=colliding_items.size(); i < n; i++){

@@ -3,9 +3,11 @@
 
 #include <QObject>
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <math.h>
 #include <QTimer>
 #include <QMediaPlayer>
+#include <QPainter>
 #include "panel.h"
 
 //Clase de la bala del defensor
@@ -14,7 +16,7 @@ class Bullet_defensor: public QObject, public QGraphicsRectItem
     Q_OBJECT
 public:
     Bullet_defensor(double px, double py);
-    void detener();
+    void detener();   
 
 public slots:
     void move();

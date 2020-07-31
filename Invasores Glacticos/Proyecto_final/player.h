@@ -2,12 +2,13 @@
 #define PLAYER_H
 
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 
 //Clase de los jugadores del juego
-class Player: public QGraphicsRectItem
+class Player: public QGraphicsPixmapItem
 {
 public:
-    Player();
+    Player(int t);
 };
 
 #endif // PLAYER_H

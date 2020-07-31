@@ -7,11 +7,15 @@ extern Panel *p;//Objeto global del panel principal del juego
 //Bala del defensor
 Bullet_defensor::Bullet_defensor(double px, double py)
 {
+    //Dibuja la bala
+    //setPixmap(QPixmap(":/images/Bala_pasiva_terrestre.png"));
+
     posx = px;
     posy = py;
     vel = 60.0;
     ang = 45.0;
     setRect(posx,posy,20,20);
+    this->setBrush(QBrush(QPixmap(":/images/Bala_pasiva_invasor.png")));
 
     bala_timer = new QTimer();
     connect(bala_timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -23,6 +27,7 @@ Bullet_defensor::Bullet_defensor(double px, double py)
 //Funcion para detener el movimiento de la bala
 void Bullet_defensor::detener()
 {
+   qDebug() << "entre a detener";
    bala_timer->stop();
    sonido_choque->stop();
 }
@@ -39,6 +44,7 @@ void Bullet_defensor::move()
     posx=posx+vel_x*delta;
     posy=posy+vel_y*delta-(0.5*g*delta*delta);
     setPos(posx,-posy);
+    //qDebug()<<"bala en "<<this->y()<<" y "<<this->x();
     //qDebug() << "bala en " << this->y();
     //Coliciones con los jugadores
     QList <QGraphicsItem *> colliding_items = collidingItems();

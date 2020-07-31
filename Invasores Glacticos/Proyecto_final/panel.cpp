@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include <QBrush>
+#include <QImage>
 #include "defensor.h"
 #include "invasor.h"
 
@@ -17,11 +19,14 @@ Panel::Panel(QWidget *parent) :
     ui->setupUi(this);
     //Escena
     scene = new QGraphicsScene(20,100,770,360);
+    scene->setBackgroundBrush(QBrush(QImage(":/images/bg.jpg")));
     ui->view->setScene(scene);
 
     //Desactiva scrollbars
     ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+
 
     //Muestra la vista
     ui->view->show();
@@ -31,9 +36,9 @@ Panel::Panel(QWidget *parent) :
     vida2 = 100;
 
     //Jugadores
-    p1 = new Player();
+    p1 = new Player(1);
     jugadores.push_back(p1);
-    p2 = new Player();
+    p2 = new Player(2);
     jugadores.push_back(p2);
 
     //Obstaculos

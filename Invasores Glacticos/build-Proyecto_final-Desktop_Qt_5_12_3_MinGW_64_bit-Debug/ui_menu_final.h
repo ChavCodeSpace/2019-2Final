@@ -32,16 +32,16 @@ public:
         Menu_final->resize(400, 300);
         nuevo_juego = new QPushButton(Menu_final);
         nuevo_juego->setObjectName(QString::fromUtf8("nuevo_juego"));
-        nuevo_juego->setGeometry(QRect(40, 200, 80, 21));
+        nuevo_juego->setGeometry(QRect(30, 250, 80, 21));
         salir = new QPushButton(Menu_final);
         salir->setObjectName(QString::fromUtf8("salir"));
-        salir->setGeometry(QRect(280, 200, 80, 21));
+        salir->setGeometry(QRect(290, 250, 80, 21));
         tablon = new QPushButton(Menu_final);
         tablon->setObjectName(QString::fromUtf8("tablon"));
         tablon->setGeometry(QRect(40, 30, 80, 21));
         resultados = new QTextEdit(Menu_final);
         resultados->setObjectName(QString::fromUtf8("resultados"));
-        resultados->setGeometry(QRect(90, 70, 201, 101));
+        resultados->setGeometry(QRect(40, 70, 321, 161));
 
         retranslateUi(Menu_final);
 

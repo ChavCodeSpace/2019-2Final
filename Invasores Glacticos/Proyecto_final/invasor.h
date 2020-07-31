@@ -3,12 +3,13 @@
 
 #include <QObject>
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <QTimer>
 #include <QGraphicsScene>
 #include "proyectil_invasor.h"
 
 //Clase del aliado invasor
-class Invasor: public QObject, public QGraphicsRectItem
+class Invasor: public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
